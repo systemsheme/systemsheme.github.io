@@ -1,0 +1,9 @@
+- title: Laboratory manual
+  image: /img/resources/lab_manual.png
+  imageLink: https://github.com/systemsheme/internal/lab-manual.md
+  description: "A guide describing best practices for the Asiri Lab. This document was adapted from <a href='https://med.stanford.edu/profiles/john-boothroyd' target='_blank'><strong style='color:#404040ff'>Dr. John Boothroyd's</strong></a> laboratory guide and is continually updated."
+
+- title: Processing single cell multi-omics data
+  image: /img/resources/bloodreview.jpeg
+  imageLink: https://github.com/systemsheme/internal/single-cell-multi-omics.qmd
+  description: "A guide ..."

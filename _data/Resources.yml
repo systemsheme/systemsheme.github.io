@@ -1,0 +1,15 @@
+# - title: Laboratory Manual
+#   image: /img/resources/lab_manual.png
+#   imageLink: https:/pending/
+#   description: "A guide describing best practices for the Asiri Lab. This document was initially adapted from Dr. John Boothroyd and is continually updated."
+
+- title: HSPC Classifier
+  image: /img/resources/classifier.jpg
+  imageLink: https://github.com/systemsheme/hspc
+  description: "We developed a <a href='https://github.com/systemsheme/hspc' target='_blank'><strong style='color:#404040ff'>machine learning classifier</strong></a> to annotate human hematopoietic stem and progenitor cell (HSPC) populations from bone marrow single-cell RNA-seq data. This tool can be used to annotate your scRNA-seq data based on cell types identified in our <a href='/pdfs/2025_MPP.pdf' target='_blank'><strong style='color:#404040ff'>prior work</strong></a>."
+
+- title: LSC Reference
+  image: /img/resources/lsc-ref.jpg
+  imageLink: https://github.com/systemsheme/precog-aml
+  description: "Using single-cell multi-omics, were able to identify AML LSCs at high resolution and purity. We developed an integrated single cell data set and reference signature matrix for bulk gene expression deconvolution as part of this study. The methods used to generate these tools are provided <a href='https://github.com/systemsheme/precog-aml' target='_blank'><strong style='color:#404040ff'>here</strong></a>."
+

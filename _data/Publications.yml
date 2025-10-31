@@ -1,0 +1,47 @@
+- title: Single cell multi-omics enables high-resolution identification and purification of human acute myeloid leukemia stem cells
+  image: /img/publications/lsc.jpg
+  short: High-resolution identification and purification of human AML LSCs
+  year: 2025
+  authors: '___Ediriwickrema A*___, Nakauchi Y, Köhnke T,...Majeti R'
+  pubmed: 
+  pdf: 
+  journal: 
+  journalShort: 
+  journalLink: 
+  description: 'We identified and prospectively purified human AML LSCs using single-cell multi-omics and functional assays at high resolution and purity. <br><br> <em>This manuscript is currently in preparation.</em>'
+
+- title: A single-cell framework identifies functionally and molecularly distinct multipotent progenitors in adult human hematopoiesis
+  image: /img/publications/mpp.jpg
+  short: Identification of distinct multipotent progenitors in adult human hematopoiesis
+  year: 2025
+  authors: '___Ediriwickrema A*___, Nakauchi Y, Fan AC,...Majeti R'
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/40911415/
+  pdf: /pdfs/2025_MPP.pdf
+  journal: Cell Reports
+  journalShort: Cell Reports
+  journalLink: https://www.cell.com/cell-reports/fulltext/S2211-1247(25)01007-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2211124725010071%3Fshowall%3Dtrue
+  description: "Adult human <strong style='color:#404040ff'>multipotent progenitors (MPPs)</strong> are ill defined, which has limited the ability to study adult blood disorders. Here, we performed a systematic evaluation of primary adult human bone marrow cells using single cell methods and complimentary functional assays to identify molecularly and functionally distinct progenitors. As a result, we identify new adult human MPPs and <strong style='color:#404040ff'>oligopotent progenitors (OPPs)</strong> and show the potential benefits of using this framework for future studies."
+
+- title: Single-cell genomics in AML extending the frontiers of AML research
+  image: /img/publications/bloodreview.jpeg
+  short: Review of single-cell genomics in AML
+  year: 2023
+  authors: '___Ediriwickrema A*___, Gentles A, Majeti R'
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/35926108/
+  pdf: /pdfs/2023_blood_review.pdf
+  journal: Blood
+  journalShort: Blood
+  journalLink: https://ashpublications.org/blood/article/141/4/345/486116/Single-cell-genomics-in-AML-extending-the
+  description: "We describe how single-cell genomics addresses previously unanswered questions in AML pathophysiology and management, particularly by illuminating disease heterogeneity that underlies treatment resistance and relapse. We describe how the integration of mutational, transcriptional, epigenomic, and immunophenotypic data at single-cell resolution promises to elucidate the roles of leukemic stem cells, the tumor microenvironment, and selective pressures in disease pathogenesis, therapeutic response, and disease progression. This article is part of a <a href='https://ashpublications.org/blood/article/141/4/323/486597/Introduction-to-a-review-series-on-single-cell' target='_blank'><strong style='color:#404040ff'>review series</strong></a> on single-cell genomics."
+
+- title: Single-cell mutational profiling enhances the clinical evaluation of AML MRD
+  image: /img/publications/bloodadv-scdna.png
+  short: Single-cell DNA-seq and AML MRD
+  year: 2020
+  authors: '___Ediriwickrema A*___, Aleshin A, Reiter JG,... Majeti R'
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/32150611/
+  pdf: /pdfs/2023_blood_adv.pdf
+  journal: Blood Advances
+  journalShort: Blood Adv
+  journalLink: https://ashpublications.org/blood/article/141/4/345/486116/Single-cell-genomics-in-AML-extending-the
+  description: 'Here we investigated the utility of single cell DNA-sequencing (scDNA-seq) for evaluating measurable residual disease (MRD) in AML. We used a scDNA-seq assay to profile recurrently mutated genes in AML and applied it to longitudinal samples from 14 AML patients undergoing therapy. We found that scDNA-seq allowed us to detect AML clones at remission that expanded into the dominant clone at relapse. We also show how scDNA-seq can provide unique information on mutation co-occurence and clonal diversity that may enhance MRD evaluation.'

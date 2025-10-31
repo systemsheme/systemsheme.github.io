@@ -1,0 +1,28 @@
+# You can define your custom navbar links here.
+# Use the same key you added in _config.yml -> navbar-links.
+# In addition to that you need to specify the following properties:
+#   icon: Specify a valid fontawesome icon class
+
+Research:
+  icon: "fa fa-dot-circle"
+
+Team:
+  icon: "fa fa-user-circle"
+
+Social:
+  icon: "fa fa-play-circle"
+
+Resources:
+  icon: "fa fa-info-circle"
+
+Publications:
+  icon: "fa fa-chevron-circle-up"
+
+Clinic:
+  icon: "fa fa-plus-circle"
+
+Contact:
+  icon: "fa fa-question-circle"
+
+Internal:
+  icon: "fa fa-circle"

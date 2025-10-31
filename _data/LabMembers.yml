@@ -1,0 +1,64 @@
+
+- name: Asiri Ediriwickrema M.D., Ph.D.
+  image: /img/members/asiri.jpg
+  altimage: /img/members/asiri.jpg
+  position: Principal Investigator
+  email: asiri (at) stanford.edu
+  scholar: 6VtjQ5g
+  # bluesky: "asirilab.bsky.social"
+  orcid: "0000-0002-6480-8290"
+  description: "<p>I earned my undergraduate degree in Mechanical Engineering from MIT with a minor in Biomedical Engineering. During this time, I had the privilege of working under the mentorship of <a href='https://langerlab.mit.edu' target='_blank'><strong style='color:#404040ff'>Dr. Robert Langer</strong></a> and <a href='https://profiles.ucsf.edu/rajiv.saigal' target='_blank'><strong style='color:#404040ff'>Dr. Rajiv Saigal</strong></a>. We explored how conductive polymers could mitigate neuronal damage following excitotoxic injuries. These experiences provided foundational training in biomedical research and quantitative methods, and motivated me to continue research during my medical training.</p>
+  
+  <p>I therefore joined the lab of <a href='https://saltzmanlab.yale.edu' target='_blank'><strong style='color:#404040ff'>Dr. Mark Saltzman's</strong></a> while completing my medical education at Yale School of Medicine. We designed both systemic and topical nanoparticle platforms for <a href='https://www.nature.com/articles/nmat4422' target='_blank'><strong style='color:#404040ff'>preventative</strong></a> and <a href='https://pubmed.ncbi.nlm.nih.gov/25112935/' target='_blank'><strong style='color:#404040ff'>therapeutic</strong></a> applications in cancer treatment. Following medical school, I moved to Stanford to complete my residency, fellowship, and Ph.D. in Hematology and Cancer Biology. Under the guidance of <a href='https://med.stanford.edu/majetilab.html' target='_blank'><strong style='color:#404040ff'>Dr. Ravi Majeti</strong></a>, I built a framework for studying healthy and malignant hematopoiesis using single cell multi-omics, and identified new multipotent progenitor cell populations in normal hematopoiesis and high-risk leukemia stem cells in acute myeloid leukemia.</p>
+  
+  <p>As the principal investigator of the Asiri Lab, we are further developing these methods by integrating single-cell technologies, computational biology, machine learning, and functional hematology to investigate the complexities of both normal and malignant blood cell development.</p>"
+
+- name: Michael Zheng, B.S., M.S.
+  image: 
+  altimage: 
+  position: Life Science Research Professional
+  email: mmzheng (at) stanford.edu
+  # scholar: 
+  # orcid: ""
+  # twitter: ""
+  description: "I grew up ***"
+
+- name: Kotoha Togami, B.S.
+  image: 
+  altimage: 
+  position: Life Science Research Professional
+  email: kotoha (at) stanford.edu
+  # scholar: 
+  # orcid: ""
+  # twitter: ""
+  description: "I grew up ***"
+
+- name: Erika Chengxiang Li
+  image: 
+  altimage: 
+  position: Undergraduate Student at Stanford
+  email: erikaecl (at) stanford.edu
+  # scholar: nkUkMZYAAAAJ
+  # orcid: "0000-0002-1993-612X"
+  # twitter: ""
+  description: "I grew up ***"
+
+- name: Camille Chu
+  image: 
+  altimage: 
+  position: High School Student at the Nueva School
+  email: camchu (at) stanford.edu
+  # scholar: nkUkMZYAAAAJ
+  # orcid: "0000-0002-1993-612X"
+  # twitter: ""
+  description: "I grew up ***"
+
+- name: Evelyn Fonseca
+  image: 
+  altimage: 
+  position: Administrative Associate
+  email: evecarol (at) stanford.edu
+  # scholar: 
+  # orcid: 
+  # twitter: ""
+  description: "I grew up ***"
