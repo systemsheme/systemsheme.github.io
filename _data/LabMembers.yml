@@ -21,7 +21,7 @@
   # scholar: 
   # orcid: ""
   # twitter: ""
-  description: "I grew up ***"
+  description: ""
 
 - name: Kotoha Togami, B.S.
   image: 
@@ -31,7 +31,7 @@
   # scholar: 
   # orcid: ""
   # twitter: ""
-  description: "I grew up ***"
+  description: ""
 
 - name: Erika Chengxiang Li
   image: 
@@ -41,7 +41,7 @@
   # scholar: nkUkMZYAAAAJ
   # orcid: "0000-0002-1993-612X"
   # twitter: ""
-  description: "I grew up ***"
+  description: ""
 
 - name: Camille Chu
   image: 
@@ -51,7 +51,7 @@
   # scholar: nkUkMZYAAAAJ
   # orcid: "0000-0002-1993-612X"
   # twitter: ""
-  description: "I grew up ***"
+  description: ""
 
 - name: Evelyn Fonseca
   image: 
@@ -61,4 +61,4 @@
   # scholar: 
   # orcid: 
   # twitter: ""
-  description: "I grew up ***"
+  description: ""
