@@ -85,7 +85,7 @@ subtitle: Asiri Lab Research
 			<figcaption style="font-size: 0.9em; color: #404040ff; text-align: left; margin-top: 5px;">Figure 3: The LSC model of AML</figcaption>
         </div>
         <div class="col-sm-7" style="text-align: justify">
-            <p>We are now using this framework and the cancer stem cell model to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
+            <p>We are now using these methods to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
             <p>Specifically, we will answer several important questions using the cancer stem cell model as a reference. First, how do <strong style="color:#404040ff">cancer stem cells (CSCs)</strong> emerge from healthy HSPCs, and can we identify features that distinguish CSCs from <strong style="color:#404040ff">preleukemic HSCs (pHSCs)</strong> and healthy HSPCs (Project 1)? Can we use this framework to study CSCs across other myeloid neoplasms (Project 2)? Finally, can we use this information to improve clinical disease monitoring assays and develop CSC targeted therapies to cure patients (Project 3)?</p>
         </div>
     </div>
@@ -97,10 +97,10 @@ subtitle: Asiri Lab Research
 </div>
 
 <div id="Project1" class="col-sm-12">
-	<h4><u>Project #1: Healthy hematopoiesis and clonal hematopoiesis</u></h4>
+	<h4><u>Project #1: Stem cells in healthy and malignant hematopoiesis</u></h4>
     <div class="row">
         <div class="col-sm-7" style="text-align: justify">
-			<p>Identifying CSCs, pHSCs, and healthy HSPCs first requires confirming the clonal nature of the cell. Subsequently, the functional capacity of that clone needs to be assessed <em>in vivo</em> to distinguish CSCs from pHSCs and HSPCs. We are developing a unified method for lineage tracing and multi-omic profiling and are using these techniques to develop stem cell specific clinical biomarker assays and implement mechanistic studies in CSC pathogenesis.</p>
+			<p>Identifying CSCs, pHSCs, and healthy HSPCs requires confirming both the clonal nature of the cell and its functional capacity <em>in vivo</em>. We are developing single cell methods for both lineage tracing and multi-omic profiling to enhance functional and mechanistic studies in CSC pathogenesis. Our long term goal is to use these methods to develop stem cell specific clinical biomarker assays</p>
         </div>
 		<div class="col-sm-5" style="text-align: right">
             <img src="/img/research/project1.png" style="width: {% if pub.imageWidth %}{{pub.imageWidth}}{% else %}100%{% endif %} !important; height: auto !important;"><br>    	
@@ -117,7 +117,7 @@ subtitle: Asiri Lab Research
 	<h4><u>Project #2: Stem cell architecture in myeloid neoplasms</u></h4>
     <div class="row">
         <div class="col-sm-9" style="text-align: justify">
-			<p>Myeloid CSCs are poorly defined in myeloid cancers like <strong style="color:#404040ff">myelodysplastic neoplasms (MDS)</strong>, <strong style="color:#404040ff">myeloproliferative neoplasms (MPN)</strong>, <strong style="color:#404040ff">systemic mastocytosis (SM)</strong>, and <strong style="color:#404040ff">chronic myelomonocytic leukemia (CMML)</strong>. We are currently applying our multi-omic single cell methods to study myeloid CSCs. Through collaborations with multiple clinical investigators at Stanford and beyond, we are acquiring pre and on-treatment samples from patients receiving standard and novel anti-cancer therapies. These samples are being profiled prospectively with the goal of defining the cellular architecture across myeloid neoplasms on treatment using both single cell and bulk molecular profiling methods and functional hematologic assays.</p>
+			<p>Myeloid CSCs are poorly defined in myeloid cancers like <strong style="color:#404040ff">myelodysplastic neoplasms (MDS)</strong>, <strong style="color:#404040ff">myeloproliferative neoplasms (MPN)</strong>, <strong style="color:#404040ff">systemic mastocytosis (SM)</strong>, and <strong style="color:#404040ff">chronic myelomonocytic leukemia (CMML)</strong>. We are currently applying our multi-omic single cell methods to study myeloid CSCs across myeloid malignancies. Through collaborations with multiple clinical investigators at Stanford and beyond, we are acquiring pre and on-treatment samples from patients receiving standard and novel anti-cancer therapies. These samples are being profiled prospectively with the goal of defining the cellular architecture across myeloid neoplasms on treatment using both single cell and bulk molecular profiling methods and functional hematologic assays.</p>
         </div>
 		<div class="col-sm-3" style="text-align: right">
             <img src="/img/research/project2.png" style="width: {% if pub.imageWidth %}{{pub.imageWidth}}{% else %}100%{% endif %} !important; height: auto !important;"><br>    	
