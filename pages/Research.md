@@ -47,7 +47,7 @@ subtitle: Asiri Lab Research
 		<img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" style="height: 30px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" style="height: 27px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" style="height: 37px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHlogoSVG.png" style="height: 52px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" style="height: 52px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" style="height: 50px">
 	</figure>
 	<p><br></p>
