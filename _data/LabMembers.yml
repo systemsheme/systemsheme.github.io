@@ -24,14 +24,14 @@
   description: ""
 
 - name: Kotoha Togami, B.S.
-  image: 
-  altimage: 
+  image: /img/members/kotoha.jpeg
+  altimage: /img/members/kotoha.jpeg
   position: Life Science Research Professional
   email: kotoha (at) stanford.edu
-  # scholar: 
+  # scholar: rP5rEKI
   # orcid: ""
   # twitter: ""
-  description: ""
+  description: "I completed my bachelor’s degree in Statistical Data Science with a minor in Mathematics at UC Davis. During my undergrad, I joined Dr. Stefan Keller’s lab at the UC Davis School of Veterinary Medicine, where we developed methods to turn messy clinical data into clinician-ready tools. I automated a pipeline to parse, normalize, and validate veterinary lab data to produce clinical reports, reducing manual report prep time. Additionally, I helped develop unsupervised machine learning models for clinical decision-support, which are now being used by veterinarians for diagnosis and prognostication. Also during my undergrad, I interned as a Product Manager at Stanford Medicine Technology and Digital Solutions on the MyHealth (patient portal) team. My internship immersed me in the operational side of healthcare, where I analyzed electronic health records, MyHealth usage data, and patient survey data to identify opportunities for improving patient satisfaction and care delivery through the MyHealth portal. I had the opportunity to join Dr. Jonathan H. Chen’s lab during this time, further exploring how bioinformatics is reshaping the field of medicine. Under his mentorship, I contributed to the “Science & Medicine” chapter in the 2025 AI Index. My topic focused on LLM integration in clinical workflows and the role of social determinants of health in model performance and fairness. In the Asiri Lab, I am excited to apply my skills in data science and machine learning to build new clinical prediction systems for patients with myeloid maligancies."
 
 - name: Erika Chengxiang Li
   image: 
