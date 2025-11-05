@@ -24,14 +24,14 @@
   description: "I completed my bachelor’s degree in Statistical Data Science with a minor in Mathematics at UC Davis. During my undergrad, I joined Dr. Stefan Keller’s lab at the UC Davis School of Veterinary Medicine, where we developed methods to turn messy clinical data into clinician-ready tools. I automated a pipeline to parse, normalize, and validate veterinary lab data to produce clinical reports, reducing manual report prep time. Additionally, I helped develop unsupervised machine learning models for clinical decision-support, which are now being used by veterinarians for diagnosis and prognostication. Also during my undergrad, I interned as a Product Manager at Stanford Medicine Technology and Digital Solutions on the MyHealth (patient portal) team. My internship immersed me in the operational side of healthcare, where I analyzed electronic health records, MyHealth usage data, and patient survey data to identify opportunities for improving patient satisfaction and care delivery through the MyHealth portal. I had the opportunity to join Dr. Jonathan H. Chen’s lab during this time, further exploring how bioinformatics is reshaping the field of medicine. Under his mentorship, I contributed to the “Science & Medicine” chapter in the 2025 AI Index. My topic focused on LLM integration in clinical workflows and the role of social determinants of health in model performance and fairness. In the Asiri Lab, I am excited to apply my skills in data science and machine learning to build new clinical prediction systems for patients with myeloid maligancies."
 
 - name: Michael Zheng, B.S., M.S.
-  image: 
-  altimage: 
+  image: /img/members/mz.png
+  altimage: /img/members/mz.png
   position: Life Science Research Professional
   email: mmzheng (at) stanford.edu
   # scholar: 
   # orcid: ""
   # twitter: ""
-  description: ""
+  description: "I grew up in the Bay Area and earned my Bachelor of Science at UC Santa Barbara, where I double majored in Statistics & Data Science and Biochemistry-Molecular Biology. As an undergraduate, I explored RNA regulation using a functional variant of CRISPR, gaining hands-on wet lab experience and becoming familiar with a wide range of molecular biology techniques. I later pursued a Master of Science in Computational Biology at Carnegie Mellon University to strengthen my foundation in computer science and pivot toward computational research. There, my work focused on optimizing the performance of a Hypergraphlet Counter through parallel programming in C++ and designing a Python-based sequence generator for synthetic intrinsically disordered proteins. Outside of research, I enjoy reading and playing bridge. In the Asiri Lab, I am excited to apply my computational skills to study blood development using single cell lineage tracing."
 
 - name: Erika Chengxiang Li
   image: 
