@@ -47,7 +47,7 @@ subtitle: Asiri Lab Clinic
 	<h4><u>MDS Center</u></h4>
 	<div class="row">
 		<div class="col-sm-7" style="text-align: justify">
-			<p><a href="https://med.stanford.edu/profiles/peter-greenberg" target="_blank"><strong style="color:#404040ff">Dr. Peter Greenberg</strong></a> built the <a href="https://med.stanford.edu/hematology/patient_care/mdscenter.html" target="_blank"><strong style="color:#404040ff">MDS Center at Stanford</strong></a> to provide sophisticated expertise for adults with MDS. We offer an integrative resource for both patients and clinicians to improve the care of our patients. If interested, please contact us to learn more about the program and our clinical trials.</p>
+			<p><a href="https://med.stanford.edu/profiles/peter-greenberg" target="_blank"><strong style="color:#404040ff">Dr. Peter Greenberg</strong></a> built the <a href="https://med.stanford.edu/hematology/patient_care/mdscenter.html" target="_blank"><strong style="color:#404040ff">MDS Center at Stanford</strong></a> to provide sophisticated expertise for adults with MDS. We offer an integrative resource for both patients and clinicians to improve the care of our patients. If interested, please contact us to learn more about the program and our research initiatives.</p>
 		</div>
 		<div class="col-sm-5" style="text-align: right">
 			<img src="/img/blakewilbur.png" style="width: {% if pub.imageWidth %}{{pub.imageWidth}}{% else %}100%{% endif %} !important; height: auto !important;"><br>    	

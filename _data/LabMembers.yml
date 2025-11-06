@@ -33,32 +33,32 @@
   # twitter: ""
   description: "I grew up in the Bay Area and earned my Bachelor of Science at UC Santa Barbara, where I double majored in Statistics & Data Science and Biochemistry-Molecular Biology. As an undergraduate, I explored RNA regulation using a functional variant of CRISPR, gaining hands-on wet lab experience and becoming familiar with a wide range of molecular biology techniques. I later pursued a Master of Science in Computational Biology at Carnegie Mellon University to strengthen my foundation in computer science and pivot toward computational research. There, my work focused on optimizing the performance of a Hypergraphlet Counter through parallel programming in C++ and designing a Python-based sequence generator for synthetic intrinsically disordered proteins. Outside of research, I enjoy reading and playing bridge. In the Asiri Lab, I am excited to apply my computational skills to study blood development using single cell lineage tracing."
 
-- name: Erika Chengxiang Li
-  image: 
-  altimage: 
-  position: Undergraduate Student at Stanford
-  email: erikaecl (at) stanford.edu
-  # scholar: nkUkMZYAAAAJ
-  # orcid: "0000-0002-1993-612X"
-  # twitter: ""
-  description: ""
+# - name: Erika Chengxiang Li
+#   image: 
+#   altimage: 
+#   position: Undergraduate Student at Stanford
+#   email: erikaecl (at) stanford.edu
+#   # scholar: nkUkMZYAAAAJ
+#   # orcid: "0000-0002-1993-612X"
+#   # twitter: ""
+#   description: ""
 
-- name: Camille Chu
-  image: 
-  altimage: 
-  position: High School Student at the Nueva School
-  email: camchu (at) stanford.edu
-  # scholar: nkUkMZYAAAAJ
-  # orcid: "0000-0002-1993-612X"
-  # twitter: ""
-  description: ""
+# - name: Camille Chu
+#   image: 
+#   altimage: 
+#   position: High School Student at the Nueva School
+#   email: camchu (at) stanford.edu
+#   # scholar: nkUkMZYAAAAJ
+#   # orcid: "0000-0002-1993-612X"
+#   # twitter: ""
+#   description: ""
 
 - name: Evelyn Fonseca
-  image: 
-  altimage: 
+  image: /img/members/evelyn.jpg
+  altimage: /img/members/evelyn.jpg
   position: Administrative Associate
   email: evecarol (at) stanford.edu
   # scholar: 
   # orcid: 
   # twitter: ""
-  description: ""
+  description: "I am an aspiring admin associate with roots in the vibrant city of Rio de Janeiro, Brazil. Growing up surrounded by Rio's culture and stunning landscapes, I cultivated a passion for organization and efficiency that aligns with my love for connection and collaboration. With a keen eye for detail, I really enjoy coordinating tasks and supporting teams to help them reach their goals. My diverse background allows me to bring a unique perspective that adds warmth and hospitality to every interaction. Now settled in Mountain View, I’m eager to apply my skills and experiences to create a positive impact in my workplace while sharing the vibrant essence of Brazilian culture with my colleagues. Outside of the office, I love hiking in the beautiful California mountains, dancing, cooking, dogsitting, and staying active with my functional workouts."
