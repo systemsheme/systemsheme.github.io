@@ -33,15 +33,15 @@
   # twitter: ""
   description: "I grew up in the Bay Area and earned my Bachelor of Science at UC Santa Barbara, where I double majored in Statistics & Data Science and Biochemistry-Molecular Biology. As an undergraduate, I explored RNA regulation using a functional variant of CRISPR, gaining hands-on wet lab experience and becoming familiar with a wide range of molecular biology techniques. I later pursued a Master of Science in Computational Biology at Carnegie Mellon University to strengthen my foundation in computer science and pivot toward computational research. There, my work focused on optimizing the performance of a Hypergraphlet Counter through parallel programming in C++ and designing a Python-based sequence generator for synthetic intrinsically disordered proteins. Outside of research, I enjoy reading and playing bridge. In the Asiri Lab, I am excited to apply my computational skills to study blood development using single cell lineage tracing."
 
-# - name: Erika Chengxiang Li
-#   image: 
-#   altimage: 
-#   position: Undergraduate Student at Stanford
-#   email: erikaecl (at) stanford.edu
-#   # scholar: nkUkMZYAAAAJ
-#   # orcid: "0000-0002-1993-612X"
-#   # twitter: ""
-#   description: ""
+- name: Erika Chengxiang Li
+  image: /img/members/erika.png
+  altimage: /img/members/erika.png
+  position: Undergraduate Student at Stanford. Computer Science Major with Systems Concentration
+  email: erikaecl (at) stanford.edu
+  # scholar: nkUkMZYAAAAJ
+  # orcid: "0000-0002-1993-612X"
+  # twitter: ""
+  description: "I'm currently a junior at Stanford University studying Computer Science with a concentration in Systems. I grew up in Orange County, California, where I first learned how to code. Since coming to Stanford, I've become passionate about applying AI to real-world systems that leverage big data—particularly in healthcare, where I've been working on using large language models (LLMs) to process and analyze unstructured data. In my free time, I'm an active member of aKDPhi, Stanford's Asian-interest sorority, and I love going on long walks and exploring nature. In the Asiri Lab, I'm developing computational tools that use LLMs to interrogate large datasets in both healthy and malignant hematopoiesis"
 
 # - name: Camille Chu
 #   image: 
