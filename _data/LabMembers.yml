@@ -4,7 +4,7 @@
   altimage: /img/members/asiri.JPG
   position: Principal Investigator
   email: asiri (at) stanford.edu
-  scholar: 6VtjQ5g
+  # scholar: 6VtjQ5g
   # bluesky: "asirilab.bsky.social"
   orcid: "0000-0002-6480-8290"
   description: "<p>I earned my undergraduate degree in Mechanical Engineering from MIT with a minor in Biomedical Engineering. During this time, I had the privilege of working under the mentorship of <a href='https://langerlab.mit.edu' target='_blank'><strong style='color:#404040ff'>Dr. Robert Langer</strong></a> and <a href='https://profiles.ucsf.edu/rajiv.saigal' target='_blank'><strong style='color:#404040ff'>Dr. Rajiv Saigal</strong></a>. We explored how conductive polymers could mitigate neuronal damage following excitotoxic injuries. These experiences provided foundational training in biomedical research and quantitative methods, and motivated me to continue research during my medical training.</p>
@@ -18,7 +18,7 @@
   altimage: /img/members/kotoha.jpeg
   position: Life Science Research Professional
   email: kotoha (at) stanford.edu
-  scholar: rP5rEKI
+  # scholar: rP5rEKI
   orcid: "0009-0009-0277-3801"
   # twitter: ""
   description: "I grew up in Seattle, Toronto, Kochi (Japan), and all over California. I stayed in California to complete my bachelor’s degree in Statistical Data Science with a minor in Mathematics at UC Davis. During my undergrad, I joined Dr. Stefan Keller’s lab at UC Davis Veterinary Medicine where we developed methods to turn messy clinical data into clinician-ready tools. I automated a pipeline to parse, normalize, and validate veterinary lab data to produce clinical reports, reducing manual prep time. Additionally, I helped develop unsupervised machine learning models for clinical decision support which are now being used by veterinarians to assist diagnosis and prognostication of dog and equine diseases. Also during my undergrad, I interned as a Product Manager on Stanford Medicine’s MyHealth (patient portal) team, analyzing EHR, usage data, and patient surveys to improve patient experience and care delivery through MyHealth. During this time, I had the opportunity to join Dr. Jonathan H. Chen’s lab. Under his mentorship I contributed to the “Science & Medicine” chapter in the 2025 AI Index, focusing on LLM integration in clinical workflows and the role of social determinants of health in model performance and fairness. In the Asiri Lab, I am excited to apply my skills in data science and machine learning to build new clinical prediction systems for patients with myeloid malignancies. Outside of the lab, I like to go swimming in the summer, skiing in the winter, and watercolor paint year-round."
