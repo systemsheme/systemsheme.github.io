@@ -43,15 +43,15 @@
   # twitter: ""
   description: "I'm currently a junior at Stanford University studying Computer Science with a concentration in Systems. I grew up in Orange County, California, where I first learned how to code. Since coming to Stanford, I've become passionate about applying AI to real-world systems that leverage big data—particularly in healthcare, where I've been working on using large language models (LLMs) to process and analyze unstructured data. In my free time, I'm an active member of aKDPhi, Stanford's Asian-interest sorority, and I love going on long walks and exploring nature. In the Asiri Lab, I'm developing computational tools that use LLMs to interrogate large datasets in both healthy and malignant hematopoiesis"
 
-- name: Camille Chu
-  image: /img/members/camille.jpg
-  altimage: /img/members/camille.jpg
-  position: High School Student at the Nueva School
-  email: camchu (at) stanford.edu
-  # scholar: nkUkMZYAAAAJ
-  # orcid: "0000-0002-1993-612X"
-  # twitter: ""
-  description: "I am a high school student passionate about translational research in hematologic malignancies and solid tumors using both computational and experimental methods. In collaboration with the lab of Dr. Ravi Majeti in the Stanford Institute for Stem Cell Biology and Regenerative Medicine, and I am leveraging single-cell multi-omic data to identify differentially expressed cell surface markers within important cellular subpopulations in AML and other myeloid malignancies."
+# - name: Camille Chu
+#   image: /img/members/camille.jpg
+#   altimage: /img/members/camille.jpg
+#   position: High School Student at the Nueva School
+#   email: camchu (at) stanford.edu
+#   # scholar: nkUkMZYAAAAJ
+#   # orcid: "0000-0002-1993-612X"
+#   # twitter: ""
+#   description: "I am a high school student passionate about translational research in hematologic malignancies and solid tumors using both computational and experimental methods. In collaboration with the lab of Dr. Ravi Majeti in the Stanford Institute for Stem Cell Biology and Regenerative Medicine, and I am leveraging single-cell multi-omic data to identify differentially expressed cell surface markers within important cellular subpopulations in AML and other myeloid malignancies."
 
 - name: Evelyn Fonseca
   image: /img/members/evelyn.jpg
