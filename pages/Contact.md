@@ -12,9 +12,9 @@ subtitle: Asiri Lab Contact
     	<img src="/img/chihuly.png" alt="Lorry I. Lokey Stem Cell Research Building" class="img-responsive" />
     </div>
     <div class="col-sm-8">
-        <p class="text-justify">We are located on the 3rd floor of the <strong><a href="https://med.stanford.edu/stemcell/research/sim1.html">Lorry I. Lokey Stem Cell Research Building</a></strong> at 265 Campus Drive, Stanford University School of Medicine. Asiri's office is room number G3101D and the lab is room number G3105.</p>
+        <p class="text-justify">We are located on the 3rd floor of the <strong><a href="https://med.stanford.edu/stemcell/research/sim1.html">Lorry I. Lokey Stem Cell Research Building</a></strong> at 265 Campus Drive, Stanford University School of Medicine. Asiri's office is room number G3101D and the lab is room number G3015.</p>
 
-        <p> We encourage you to review our research <strong><a href="{{ site.baseurl }}/pages/Research">interests</a></strong> and <strong><a href="{{ site.baseurl }}/pages/Publications">publications</a></strong> on this website to learn more about our group. If you are interested in interviewing, rotating, collaborating, or learning more about our research, <strong><a href="mailto:asiri@stanford.edu">send Asiri an email</a></strong> to set up a time to talk about ongoing projects or new collaborations. Potential postdoctoral research and clinical fellows can include their CV or Biosketch, and a short statement on the types of projects that they are interested in pursuing in the Asiri Lab. You can learn about postdoctoral research positions at Stanford by visiting their <strong><a href="https://postdocs.stanford.edu/prospective-postdocs">website</a></strong>.</p>
+        <p> We encourage you to review our research <strong><a href="{{ site.baseurl }}/pages/Research">interests</a></strong> and <strong><a href="{{ site.baseurl }}/pages/Publications">publications</a></strong> on this website to learn more about our group. If you are interested in interviewing, rotating, collaborating, or learning more about our research, <strong><a href="mailto:asiri@stanford.edu">send Asiri an email</a></strong> to set up a time to talk about ongoing projects or new collaborations. Potential postdoctoral research and clinical fellows can include their CV or Biosketch, and a short statement on the types of projects that they are interested in pursuing in the Asiri Lab. You can learn about postdoctoral research positions at Stanford by visiting this <strong><a href="https://postdocs.stanford.edu/prospective-postdocs">website</a></strong>.</p>
 
         <p> If you are interested in philanthropically supporting our research, please visit our <strong><a href="https://med.stanford.edu/hematology/about/make-a-gift-to-the-division-of-hematology-.html">donations</a></strong> page for more information on how to contribute to our work.</p>
     </div>
@@ -27,7 +27,7 @@ subtitle: Asiri Lab Contact
     <div class="col-sm-8">
         <p class="text-justify"><strong>Asiri Lab</strong>
         <br> Lokey Stem Cell Research Building
-        <br> Room G3105
+        <br> Room G3015
         <br> 265 Campus Drive
         <br> Stanford, CA 94305
         <br> PI Phone: (650) 723-1358
