@@ -14,7 +14,7 @@
   description: "Using single-cell multi-omics, were able to identify AML LSCs at high resolution and purity. We developed an integrated single cell data set and reference signature matrix for bulk gene expression deconvolution as part of this study. The methods used to generate these tools are provided <a href='https://github.com/systemsheme/precog-aml' target='_blank'><strong style='color:#404040ff'>here</strong></a>."
 
 - title: Xenotransplantation Protocol
-  image: /img/resources/xeno.jpg
+  image: /img/resources/xeno.png
   imageLink: https://www.jove.com/v/65874/simplified-intrafemoral-injections-using-live-mice-allow-for
   description: "Protocol describing intrafemoral injection of hematopoietic or leukemic stem cells, including gene-edited cells, in murine xenograft models, which will not only enable the quick and safe transplantation of cells but also serial analyses of the bone marrow.erence signature matrix for bulk gene expression deconvolution as part of this study. The methods used to generate these tools are provided <a href='https://pubmed.ncbi.nlm.nih.gov/38009738/' target='_blank'><strong style='color:#404040ff'>here</strong></a>."
 
