@@ -1,5 +1,6 @@
 
 - name: Asiri Ediriwickrema M.D., Ph.D.
+  lastname: Ediriwickrema
   image: /img/members/asiri.JPG
   altimage: /img/members/asiri.JPG
   position: Principal Investigator
@@ -13,27 +14,41 @@
   
   <p>As the principal investigator of the Asiri Lab, we are further developing these methods by integrating single-cell technologies, computational biology, machine learning, and functional hematology to investigate the complexities of both normal and malignant blood cell development.</p>"
 
-- name: Kotoha Togami, B.S.
-  image: /img/members/kotoha.jpeg
-  altimage: /img/members/kotoha.jpeg
-  position: Life Science Research Professional
-  email: kotoha (at) stanford.edu
-  # scholar: rP5rEKI
-  orcid: "0009-0009-0277-3801"
+- name: Camille Chu
+  lastname: Chu
+  image: /img/members/camille.jpg
+  altimage: /img/members/camille.jpg
+  position: High School Student at the Nueva School
+  email: camchu (at) stanford.edu
+  # scholar: nkUkMZYAAAAJ
+  # orcid: "0000-0002-1993-612X"
   # twitter: ""
-  description: "I grew up in Seattle, Toronto, Kochi (Japan), and all over California. I stayed in California to complete my bachelor’s degree in Statistical Data Science with a minor in Mathematics at UC Davis. During my undergrad, I joined Dr. Stefan Keller’s lab at UC Davis Veterinary Medicine where we developed methods to turn messy clinical data into clinician-ready tools. I automated a pipeline to parse, normalize, and validate veterinary lab data to produce clinical reports, reducing manual prep time. Additionally, I helped develop unsupervised machine learning models for clinical decision support which are now being used by veterinarians to assist diagnosis and prognostication of dog and equine diseases. Also during my undergrad, I interned as a Product Manager on Stanford Medicine’s MyHealth (patient portal) team, analyzing EHR, usage data, and patient surveys to improve patient experience and care delivery through MyHealth. During this time, I had the opportunity to join Dr. Jonathan H. Chen’s lab. Under his mentorship I contributed to the “Science & Medicine” chapter in the 2025 AI Index, focusing on LLM integration in clinical workflows and the role of social determinants of health in model performance and fairness. In the Asiri Lab, I am excited to apply my skills in data science and machine learning to build new clinical prediction systems for patients with myeloid malignancies. Outside of the lab, I like to go swimming in the summer, skiing in the winter, and watercolor paint year-round."
+  description: "I am a high school student passionate about translational research in hematologic malignancies and solid tumors using both computational and experimental methods. In collaboration with the lab of Dr. Ravi Majeti in the Stanford Institute for Stem Cell Biology and Regenerative Medicine, and I am leveraging single-cell multi-omic data to identify differentially expressed cell surface markers within important cellular subpopulations in AML and other myeloid malignancies."
 
-- name: Michael Zheng, B.S., M.S.
-  image: /img/members/mz.png
-  altimage: /img/members/mz.png
-  position: Life Science Research Professional
-  email: mmzheng (at) stanford.edu
-  # scholar: 
+- name: Ritika Dutta M.D.
+  lastname: Dutta
+  image: /img/members/ritika.jpg
+  altimage: /img/members/ritika.jpg
+  position: Hematology/Oncology Fellow
+  email: rdutta (at) stanford.edu
+  # scholar:
   # orcid: ""
   # twitter: ""
-  description: "I grew up in the Bay Area and earned my Bachelor of Science at UC Santa Barbara, where I double majored in Statistics & Data Science and Biochemistry-Molecular Biology. As an undergraduate, I explored RNA regulation using a functional variant of CRISPR, gaining hands-on wet lab experience and becoming familiar with a wide range of molecular biology techniques. I later pursued a Master of Science in Computational Biology at Carnegie Mellon University to strengthen my foundation in computer science and pivot toward computational research. There, my work focused on optimizing the performance of a Hypergraphlet Counter through parallel programming in C++ and designing a Python-based sequence generator for synthetic intrinsically disordered proteins. Outside of research, I enjoy reading and playing bridge. In the Asiri Lab, I am excited to apply my computational skills to study blood development using single cell lineage tracing."
+  description: "I am a Hematology/Oncology fellow at Stanford, where my work focuses on integrating translational science with early-phase clinical trials in acute myeloid leukemia (AML). I grew up in Orange County and completed my undergraduate training at Stanford, where I first developed an interest in AML in Dr. Kathleen Sakamoto's lab, studying small molecule inhibitors targeting CREB, a transcription factor implicated in pediatric AML. I received my MD from Stanford, where I trained in the lab of Dr. Ravi Majeti, investigating how AML suppresses normal hematopoiesis and identifying strategies to restore erythroid differentiation through modulation of inflammatory and metabolic pathways. I then completed my Internal Medicine residency at Brigham and Women's Hospital, where I worked with Dr. Coleman Lindsley and Dr. Chris Reilly to study germline predisposition to myeloid malignancies. In the Asiri Lab, in collaboration with Dr. Ravi Majeti and Dr. Tian Zhang, I hope to use single-cell multiomic approaches to define the mechanisms of residual disease in AML, with the goal of informing more precise therapeutic strategies."
+
+- name: Evelyn Fonseca
+  lastname: Fonseca
+  image: /img/members/evelyn.jpg
+  altimage: /img/members/evelyn.jpg
+  position: Administrative Associate
+  email: evecarol (at) stanford.edu
+  # scholar: 
+  # orcid: 
+  # twitter: ""
+  description: "I am an aspiring admin associate with roots in the vibrant city of Rio de Janeiro, Brazil. Growing up surrounded by Rio's culture and stunning landscapes, I cultivated a passion for organization and efficiency that aligns with my love for connection and collaboration. With a keen eye for detail, I really enjoy coordinating tasks and supporting teams to help them reach their goals. My diverse background allows me to bring a unique perspective that adds warmth and hospitality to every interaction. Now settled in Mountain View, I’m eager to apply my skills and experiences to create a positive impact in my workplace while sharing the vibrant essence of Brazilian culture with my colleagues. Outside of the office, I love hiking in the beautiful California mountains, dancing, cooking, dogsitting, and staying active with my functional workouts."
 
 - name: Ayush Garg
+  lastname: Garg
   image: /img/members/ayush_headshot.jpg
   altimage: /img/members/ayush_headshot.jpg
   position: Undergraduate Student at Stanford.
@@ -44,6 +59,7 @@
   description: "I'm a freshman at Stanford University interested in bioinformatics, computer science, and artificial intelligence. I grew up in Dublin, California and have worked on research projects in the past with computer vision for brain and dental disease detection, as well as contributed to correlation studies on brain fMRI and structural MRI data. I'm passionate about using artificial intelligence to solve problems in healthcare and biomedicine, especially through machine learning models, and am excited to work on developing new computational methods for studying hematopoiesis and myeloid cancers in the Asiri Lab! In my free time, you can find me hiking, playing games, or just hanging out with friends."
 
 - name: Erika Chengxiang Li
+  lastname: Li
   image: /img/members/erika.png
   altimage: /img/members/erika.png
   position: Undergraduate Student at Stanford. Computer Science Major with Systems Concentration
@@ -53,22 +69,24 @@
   # twitter: ""
   description: "I'm currently a junior at Stanford University studying Computer Science with a concentration in Systems. I grew up in Orange County, California, where I first learned how to code. Since coming to Stanford, I've become passionate about applying AI to real-world systems that leverage big data—particularly in healthcare, where I've been working on using large language models (LLMs) to process and analyze unstructured data. In my free time, I'm an active member of aKDPhi, Stanford's Asian-interest sorority, and I love going on long walks and exploring nature. In the Asiri Lab, I'm developing computational tools that use LLMs to interrogate large datasets in both healthy and malignant hematopoiesis"
 
-- name: Camille Chu
-  image: /img/members/camille.jpg
-  altimage: /img/members/camille.jpg
-  position: High School Student at the Nueva School
-  email: camchu (at) stanford.edu
-  # scholar: nkUkMZYAAAAJ
-  # orcid: "0000-0002-1993-612X"
+- name: Kotoha Togami, B.S.
+  lastname: Togami
+  image: /img/members/kotoha.jpeg
+  altimage: /img/members/kotoha.jpeg
+  position: Life Science Research Professional
+  email: kotoha (at) stanford.edu
+  # scholar: rP5rEKI
+  orcid: "0009-0009-0277-3801"
   # twitter: ""
-  description: "I am a high school student passionate about translational research in hematologic malignancies and solid tumors using both computational and experimental methods. In collaboration with the lab of Dr. Ravi Majeti in the Stanford Institute for Stem Cell Biology and Regenerative Medicine, and I am leveraging single-cell multi-omic data to identify differentially expressed cell surface markers within important cellular subpopulations in AML and other myeloid malignancies."
+  description: "I grew up in Seattle, Toronto, Kochi (Japan), and all over California. I stayed in California to complete my bachelor’s degree in Statistical Data Science with a minor in Mathematics at UC Davis. During my undergrad, I joined Dr. Stefan Keller’s lab at UC Davis Veterinary Medicine where we developed methods to turn messy clinical data into clinician-ready tools. I automated a pipeline to parse, normalize, and validate veterinary lab data to produce clinical reports, reducing manual prep time. Additionally, I helped develop unsupervised machine learning models for clinical decision support which are now being used by veterinarians to assist diagnosis and prognostication of dog and equine diseases. Also during my undergrad, I interned as a Product Manager on Stanford Medicine’s MyHealth (patient portal) team, analyzing EHR, usage data, and patient surveys to improve patient experience and care delivery through MyHealth. During this time, I had the opportunity to join Dr. Jonathan H. Chen’s lab. Under his mentorship I contributed to the “Science & Medicine” chapter in the 2025 AI Index, focusing on LLM integration in clinical workflows and the role of social determinants of health in model performance and fairness. In the Asiri Lab, I am excited to apply my skills in data science and machine learning to build new clinical prediction systems for patients with myeloid malignancies. Outside of the lab, I like to go swimming in the summer, skiing in the winter, and watercolor paint year-round."
 
-- name: Evelyn Fonseca
-  image: /img/members/evelyn.jpg
-  altimage: /img/members/evelyn.jpg
-  position: Administrative Associate
-  email: evecarol (at) stanford.edu
+- name: Michael Zheng, B.S., M.S.
+  lastname: Zheng
+  image: /img/members/mz.png
+  altimage: /img/members/mz.png
+  position: Life Science Research Professional
+  email: mmzheng (at) stanford.edu
   # scholar: 
-  # orcid: 
+  # orcid: ""
   # twitter: ""
-  description: "I am an aspiring admin associate with roots in the vibrant city of Rio de Janeiro, Brazil. Growing up surrounded by Rio's culture and stunning landscapes, I cultivated a passion for organization and efficiency that aligns with my love for connection and collaboration. With a keen eye for detail, I really enjoy coordinating tasks and supporting teams to help them reach their goals. My diverse background allows me to bring a unique perspective that adds warmth and hospitality to every interaction. Now settled in Mountain View, I’m eager to apply my skills and experiences to create a positive impact in my workplace while sharing the vibrant essence of Brazilian culture with my colleagues. Outside of the office, I love hiking in the beautiful California mountains, dancing, cooking, dogsitting, and staying active with my functional workouts."
+  description: "I grew up in the Bay Area and earned my Bachelor of Science at UC Santa Barbara, where I double majored in Statistics & Data Science and Biochemistry-Molecular Biology. As an undergraduate, I explored RNA regulation using a functional variant of CRISPR, gaining hands-on wet lab experience and becoming familiar with a wide range of molecular biology techniques. I later pursued a Master of Science in Computational Biology at Carnegie Mellon University to strengthen my foundation in computer science and pivot toward computational research. There, my work focused on optimizing the performance of a Hypergraphlet Counter through parallel programming in C++ and designing a Python-based sequence generator for synthetic intrinsically disordered proteins. Outside of research, I enjoy reading and playing bridge. In the Asiri Lab, I am excited to apply my computational skills to study blood development using single cell lineage tracing."

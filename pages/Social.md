@@ -9,11 +9,11 @@ subtitle: Social and News
 <div class="container" style="padding-top: 60px; margin-top: -60px;">
   <div class="jumbotron jumbotron-correct">
       <h3 style="text-align:left"> Social Events</h3>
-      <p style="font-size:14px;margin-top:10px">
-        Coming soon!
-      </p>
   </div>
 </div>
+
+{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+
 
 <div class="container" style="margin-top:30px">
   <h4>News</h4>

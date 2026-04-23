@@ -17,7 +17,10 @@ subtitle: Asiri Lab Members
 
 
 # **Lab Members**
-{% for person in site.data.LabMembers %}
+{% assign pi_members = site.data.LabMembers | where: "position", "Principal Investigator" %}
+{% assign other_members = site.data.LabMembers | where_exp: "person", "person.position != 'Principal Investigator'" | sort: "lastname" %}
+{% assign sorted_members = pi_members | concat: other_members %}
+{% for person in sorted_members %}
 <hr>
 <!-- The paddingtop and margin-top edits allow anchors to link properly. -->
 <div id = "{{person.name}}" class="row" style="padding-top: 60px; margin-top: -60px;">
