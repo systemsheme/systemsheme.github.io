@@ -1,0 +1,7 @@
+{
+  // Disable format on save for HTML files in _includes/ since they contain
+  // Liquid/Jekyll template tags that get broken by CSS/JS formatters
+  "[html]": {
+    "editor.formatOnSave": false
+  }
+}
