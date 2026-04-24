@@ -7,8 +7,8 @@ layout: null
 /* --- General --- */
 
 body {
-  font-family: Helvetica, Arial, sans-serif
-  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(15px, 1.2vw + 11px, 20px);
   color: #000000;
   position: relative;
   background-color: {{ site.page-col }};
@@ -820,4 +820,76 @@ pre {
   object-fit: contain;
   max-width: 100%;
   height: auto;
+}
+
+/* --- Responsive Typography & Layout --- */
+
+/* Fluid headings using clamp(min, fluid, max) */
+h1 { font-size: clamp(24px, 4vw + 10px, 48px); }
+h2 { font-size: clamp(20px, 3vw + 8px,  36px); }
+h3 { font-size: clamp(18px, 2vw + 8px,  28px); }
+h4 { font-size: clamp(16px, 1.5vw + 8px, 22px); }
+h5 { font-size: clamp(14px, 1vw + 8px,  18px); }
+h6 { font-size: clamp(13px, 0.8vw + 8px, 16px); }
+
+/* Fluid page/post intro headings */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  font-size: clamp(28px, 5vw + 10px, 80px);
+}
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-size: clamp(16px, 2vw + 8px, 27px);
+}
+
+/* Tables: horizontal scroll on small screens */
+table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+/* Prevent long words/URLs from breaking layout */
+p, li, td, th {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Mobile-specific adjustments */
+@media only screen and (max-width: 576px) {
+  /* Tighter container padding so content breathes on small screens */
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Reduce jumbotron padding */
+  .jumbotron {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Stack news columns vertically */
+  .col-md-3, .col-md-9 {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  /* Images: never wider than screen */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer: smaller text on phones */
+  footer {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+
+  /* Navbar logo slightly smaller */
+  .navbar-custom .navbar-brand-logo img {
+    height: 38px;
+  }
 }
