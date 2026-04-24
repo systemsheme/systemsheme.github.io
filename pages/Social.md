@@ -12,34 +12,8 @@ subtitle: Social and News
   </div>
 </div>
 
-<style>
-/* Desktop: constrained width and moderate height */
-.social-carousel-wrap {
-  max-width: 860px;
-  margin: 0 auto;
-}
-.social-carousel-wrap .carousel__holder {
-  padding-bottom: 48% !important;
-}
-/* Tablet */
-@media (max-width: 992px) {
-  .social-carousel-wrap {
-    max-width: 100%;
-  }
-  .social-carousel-wrap .carousel__holder {
-    padding-bottom: 58% !important;
-  }
-}
-/* Phone */
-@media (max-width: 576px) {
-  .social-carousel-wrap .carousel__holder {
-    padding-bottom: 75% !important;
-  }
-}
-</style>
-
-<div class="social-carousel-wrap">
-  {% include carousel.html height="48" unit="%" duration="7" number="1" %}
+<div class="container" style="max-width:760px; margin: 0 auto;">
+  {% include carousel.html duration="7" number="1" %}
 </div>
 
 
