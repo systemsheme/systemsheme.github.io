@@ -7,12 +7,12 @@ subtitle: Social and News
 <div class="clear"></div>
 
 <div class="container" style="padding-top: 60px; margin-top: -60px;">
-  <div class="jumbotron jumbotron-correct">
+  <div class="jumbotron jumbotron-correct" style="padding-top: 12px; padding-bottom: 12px;">
       <h3 style="text-align:left"> Social Events</h3>
   </div>
 </div>
 
-{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+{% include carousel.html height="70" unit="%" duration="7" number="1" %}
 
 
 <div class="container" style="margin-top:30px">
