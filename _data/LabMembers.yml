@@ -29,12 +29,12 @@
   lastname: Dutta
   image: /img/members/ritika.jpg
   altimage: /img/members/ritika.jpg
-  position: Hematology/Oncology Fellow
+  position: Hematology and Oncology Fellow
   email: rdutta (at) stanford.edu
   # scholar:
   # orcid: ""
   # twitter: ""
-  description: "I am a Hematology/Oncology fellow at Stanford, where my work focuses on integrating translational science with early-phase clinical trials in acute myeloid leukemia (AML). I grew up in Orange County and completed my undergraduate training at Stanford, where I first developed an interest in AML in Dr. Kathleen Sakamoto's lab, studying small molecule inhibitors targeting CREB, a transcription factor implicated in pediatric AML. I received my MD from Stanford, where I trained in the lab of Dr. Ravi Majeti, investigating how AML suppresses normal hematopoiesis and identifying strategies to restore erythroid differentiation through modulation of inflammatory and metabolic pathways. I then completed my Internal Medicine residency at Brigham and Women's Hospital, where I worked with Dr. Coleman Lindsley and Dr. Chris Reilly to study germline predisposition to myeloid malignancies. In the Asiri Lab, in collaboration with Dr. Ravi Majeti and Dr. Tian Zhang, I hope to use single-cell multiomic approaches to define the mechanisms of residual disease in AML, with the goal of informing more precise therapeutic strategies."
+  description: "I am a Hematology and Oncology fellow at Stanford, where my work focuses on integrating translational science with early-phase clinical trials in acute myeloid leukemia (AML). I grew up in Orange County and completed my undergraduate training at Stanford, where I first developed an interest in AML in Dr. Kathleen Sakamoto's lab, studying small molecule inhibitors targeting CREB, a transcription factor implicated in pediatric AML. I received my MD from Stanford, where I trained in the lab of Dr. Ravi Majeti, investigating how AML suppresses normal hematopoiesis and identifying strategies to restore erythroid differentiation through modulation of inflammatory and metabolic pathways. I then completed my Internal Medicine residency at Brigham and Women's Hospital, where I worked with Dr. Coleman Lindsley and Dr. Chris Reilly to study germline predisposition to myeloid malignancies. In the Asiri Lab, in collaboration with Dr. Ravi Majeti and Dr. Tian Zhang, I hope to use single-cell multiomic approaches to define the mechanisms of residual disease in AML, with the goal of informing more precise therapeutic strategies."
 
 - name: Evelyn Fonseca
   lastname: Fonseca
