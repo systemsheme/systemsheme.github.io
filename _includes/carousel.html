@@ -72,7 +72,6 @@
   overflow: hidden;
   flex: 1;
   max-width: 680px;
-  border-radius: 10px;
 }
 .cs-track {
   display: flex;
@@ -82,13 +81,15 @@
 .cs-slide {
   min-width: 100%;
   box-sizing: border-box;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 .cs-card {
-  background: #ffffff;
+  background: #f8f6f2;
   border-radius: 0;
   overflow: hidden;
-  border: 3px solid #222222;
+  border: 1px solid #bbb;
+  padding: 10px 10px 0 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
 }
 .cs-img-wrap {
   width: 100%;
@@ -103,11 +104,12 @@
   display: block;
 }
 .cs-caption {
-  padding: 16px 20px 18px;
-  font-size: clamp(13px, 1.2vw + 8px, 16px);
-  color: #333;
+  padding: 14px 6px 20px;
+  font-size: clamp(12px, 1.1vw + 7px, 15px);
+  color: #444;
   font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
+  min-height: 52px;
 }
 .cs-dots {
   display: flex;
@@ -150,7 +152,8 @@
     margin: 0 4px;
   }
   .cs-caption {
-    padding: 12px 14px 14px;
+    padding: 10px 4px 16px;
+    min-height: 44px;
   }
 }
 </style>
