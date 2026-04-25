@@ -22,7 +22,7 @@ subtitle: Asiri Lab Members
 {% for person in pi_members %}
 <div class="container" style="margin-bottom: 10px;">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-xs-4 col-sm-4">
       <img class="img-responsive" src="{{ person.image }}"
         {% if person.altimage %}
           onmouseover="this.src='{{ person.altimage }}';"
@@ -41,7 +41,7 @@ subtitle: Asiri Lab Members
         {% if person.website %}<a href="{{ person.website }}"><span class="fa fa-rss"></span> {{ person.website }}</a><br>{% endif %}
       </div>
     </div>
-    <div class="col-sm-8" style="text-align: justify; font-size: 17px;">
+    <div class="col-xs-8 col-sm-8" style="text-align: justify; font-size: 17px;">
       {{ person.description | markdownify }}
     </div>
   </div>
@@ -158,12 +158,11 @@ subtitle: Asiri Lab Members
 .tm-dot-active { background: #555; }
 
 @media (max-width: 576px) {
-  .tm-arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-  }
-  .tm-slide { padding: 0 8px; }
+  .tm-arrow { width: 28px; height: 28px; font-size: 18px; border-width: 1px; }
+  .tm-slide { padding: 0 6px; }
+  .tm-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
+  .tm-slide .col-sm-4 { width: 38% !important; flex: 0 0 38%; padding-right: 8px; font-size: 13px !important; }
+  .tm-slide .col-sm-8 { display: block; width: 62% !important; flex: 0 0 62%; font-size: 13px !important; }
 }
 </style>
 
@@ -190,5 +189,13 @@ subtitle: Asiri Lab Members
   dots.forEach(function (d, i) {
     d.addEventListener('click', function () { goTo(i); });
   });
+
+  var vp = slider.querySelector('.tm-viewport');
+  var touchStartX = 0;
+  vp.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive: true});
+  vp.addEventListener('touchend', function(e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+  }, {passive: true});
 })();
 </script>

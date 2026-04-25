@@ -172,5 +172,23 @@ subtitle: Asiri Lab Research
   document.querySelectorAll('.rp-dot').forEach(function(d){
     d.addEventListener('click', function(){ goTo(parseInt(d.getAttribute('data-i'))); });
   });
+
+  var ps = document.getElementById('projectSlider');
+  var touchStartX = 0;
+  ps.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; }, {passive: true});
+  ps.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+  }, {passive: true});
 })();
 </script>
+
+<style>
+@media (max-width: 576px) {
+  .rp-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
+  .rp-slide .col-sm-5 { width: 40% !important; flex: 0 0 40%; padding-right: 8px; }
+  .rp-slide .col-sm-7 { width: 60% !important; flex: 0 0 60%; font-size: 14px !important; }
+  .rp-slide h4 { font-size: 15px !important; }
+  #rp-prev, #rp-next { width: 32px !important; height: 32px !important; font-size: 20px !important; }
+}
+</style>

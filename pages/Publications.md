@@ -44,3 +44,11 @@ subtitle: Asiri Lab Publications
 </div>
 
 {% include page-slider.html slider_id="pubSlider" %}
+
+<style>
+@media (max-width: 576px) {
+  .ps-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
+  .ps-slide .col-sm-5 { width: 40% !important; flex: 0 0 40%; padding-right: 8px; }
+  .ps-slide .col-sm-7 { width: 60% !important; flex: 0 0 60%; font-size: 13px !important; }
+}
+</style>
