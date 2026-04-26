@@ -163,7 +163,6 @@ subtitle: Asiri Lab Members
   .tm-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
   .tm-slide .col-sm-4 { width: 38% !important; flex: 0 0 38%; padding-right: 8px; font-size: 13px !important; }
   .tm-slide .col-sm-8 { display: block; width: 62% !important; flex: 0 0 62%; font-size: 13px !important; }
-  .pi-section-row .col-xs-4 > div { font-size: 13px !important; }
   .pi-section-row .col-xs-8 { font-size: 13px !important; }
 }
 </style>
