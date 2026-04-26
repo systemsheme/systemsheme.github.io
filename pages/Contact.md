@@ -16,7 +16,7 @@ subtitle: Asiri Lab Contact
 
         <p> We encourage you to review our research <strong><a href="{{ site.baseurl }}/pages/Research">interests</a></strong> and <strong><a href="{{ site.baseurl }}/pages/Publications">publications</a></strong> on this website to learn more about our group. If you are interested in interviewing, rotating, collaborating, or learning more about our research, <strong><a href="mailto:asiri@stanford.edu">send Asiri an email</a></strong> to set up a time to talk about ongoing projects or new collaborations. Potential postdoctoral research and clinical fellows can include their CV or Biosketch, and a short statement on the types of projects that they are interested in pursuing in the Asiri Lab. You can learn about postdoctoral research positions at Stanford by visiting this <strong><a href="https://postdocs.stanford.edu/prospective-postdocs">website</a></strong>.</p>
 
-        <p> If you are interested in philanthropically supporting our research, please visit our <strong><a href="https://med.stanford.edu/hematology/about/make-a-gift-to-the-division-of-hematology-.html">donations</a></strong> page for more information on how to contribute to our work.</p>
+        <p> If you are interested in philanthropically supporting our research, please visit our <strong><a href="https://med.stanford.edu/hematology/support-us.html">donations</a></strong> page for more information on how to contribute to our work.</p>
     </div>
 </div>
 <hr>
