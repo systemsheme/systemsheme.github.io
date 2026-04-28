@@ -47,8 +47,9 @@ subtitle: Asiri Lab Publications
 
 <style>
 @media (max-width: 576px) {
-  .ps-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
-  .ps-slide .col-sm-5 { width: 40% !important; flex: 0 0 40%; padding-right: 8px; }
-  .ps-slide .col-sm-7 { width: 60% !important; flex: 0 0 60%; font-size: 13px !important; }
+  .ps-slide .row { display: block; }
+  .ps-slide .col-sm-5 { width: 100%; padding: 0 12px; margin-bottom: 12px; }
+  .ps-slide .col-sm-5 img { max-width: 100%; margin: 0 auto; display: block; }
+  .ps-slide .col-sm-7 { width: 100%; padding: 0 12px; font-size: 13px !important; }
 }
 </style>
