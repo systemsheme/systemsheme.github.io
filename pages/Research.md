@@ -5,26 +5,107 @@ subtitle: Asiri Lab Research
 ---
 
 <style>
-	.right {
-		float: right;
-		padding: 10px 10px 10px 10px;
-	}
-	.left {
-		float: left;
-		padding: 10px 10px 10px 10px;
-	}
-	.clearfix::after {
-		content: "";
-		clear: both;
-		display: table;
-	}
-	.full-width-img {
-		width: 100%;
-		max-width: 100%;
-		display: block;
-		margin: 20px 0;
-		clear: both;
-	}
+.research-section { margin: 30px 0; }
+.research-section h4 { margin-bottom: 16px; }
+
+/* Float layout (long text wraps around image) */
+.research-float-section { overflow: hidden; }
+.research-float-figure {
+  float: right;
+  width: 42%;
+  max-width: 380px;
+  margin: 4px 0 14px 24px;
+}
+.research-float-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.research-float-figure figcaption {
+  font-size: 0.85em;
+  color: #404040;
+  margin-top: 8px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Featured centered figure */
+.research-feature {
+  margin: 36px auto;
+  text-align: center;
+  max-width: 920px;
+}
+.research-feature img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.research-feature figcaption {
+  font-size: 0.9em;
+  color: #404040;
+  margin-top: 10px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* Vertically-centered grid (balanced image + text) */
+.research-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+.research-grid-image { flex: 0 0 calc(40% - 14px); margin: 0; }
+.research-grid-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.research-grid-image figcaption {
+  font-size: 0.85em;
+  color: #404040;
+  margin-top: 8px;
+  line-height: 1.4;
+  text-align: left;
+}
+.research-grid-text {
+  flex: 1 1 50%;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.research-text {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .research-float-figure {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 18px 0;
+  }
+}
+@media (max-width: 576px) {
+  .research-section { margin: 22px 0; }
+  .research-text,
+  .research-grid-text { font-size: 14px; line-height: 1.6; }
+  .research-feature { margin: 22px auto; }
+  .research-feature figcaption,
+  .research-float-figure figcaption,
+  .research-grid-image figcaption { font-size: 0.78em; }
+  .research-grid { flex-direction: column; gap: 16px; align-items: stretch; }
+  .research-grid-image,
+  .research-grid-text { flex: 1 1 100%; }
+}
 </style>
 
 <div class="container" style="padding-top: 60px; margin-top: -60px;">
@@ -60,35 +141,33 @@ subtitle: Asiri Lab Research
 </div>
 <hr>
 
-<div id="Introduction1" class="col-sm-12">
-	<h4><u>Introduction</u></h4>
-	<div class="square clearfix" style="text-align: justify;">
-		<figure class="right" style="margin: 0;">
-			<img src="/img/research/singlecell.jpeg" alt="Single Cell" width="375" style="display: block; margin: 0;">
-			<figcaption style="font-size: 0.9em; color: #404040ff; text-align: left; margin-top: 5px;">Figure 1: Multi-omic analysis of single cells. <br> <strong style="color:#404040ff"><a href = "/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
-		</figure>	
-		<p>Myeloid neoplasms are heterogenous, clonal disorders arising from the malignant transformation of healthy <strong style="color:#404040ff">hematopoietic stem and progenitor cells (HSPCs)</strong>. The heterogeneity is due to the underlying clonal diversity of the disease and the variable functional properties of these clones. Therefore, it is not surprising that myeloid neoplasms have been historically described as syndromes with mostly ineffective treatment strategies. The inability to completely characterize the cellular architecture of myeloid neoplasms and link it to outcomes has limited our ability to manage and cure patients. Recent advancements in single cell technologies [<strong style="color:#404040ff"><a href = "/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong>] (Figure 1) can provide methods for addressing these limitations by allowing researchers to characterize blood cells with high resolution. However, as the field of single cell genomics expands at unprecedented rates, it is increasingly important to develop a rigorous framework for interpreting and validating important single cell observations with orthogonal computational and functional studies to provide meaningful services for patients. We have developed such a framework for studying normal and malignant hematopoiesis which has allowed us to identify new HSPCs in adult hematopoiesis [<strong style="color:#404040ff"><a href = "/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong>] (Figure 2), and clinically high-risk <strong style="color:#404040ff">leukemia stem cells (LSCs)</strong> in <strong style="color:#404040ff">adult acute myeloid leukemia (AML)</strong> at high resolution.</p>
-	</div>
+<div id="Introduction1" class="col-sm-12 research-section research-float-section">
+  <h4><u>Introduction</u></h4>
+  <figure class="research-float-figure">
+    <img src="/img/research/singlecell.jpeg" alt="Single Cell">
+    <figcaption>Figure 1: Multi-omic analysis of single cells. <strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
+  </figure>
+  <p class="research-text">Myeloid neoplasms are heterogenous, clonal disorders arising from the malignant transformation of healthy <strong style="color:#404040ff">hematopoietic stem and progenitor cells (HSPCs)</strong>. The heterogeneity is due to the underlying clonal diversity of the disease and the variable functional properties of these clones. Therefore, it is not surprising that myeloid neoplasms have been historically described as syndromes with mostly ineffective treatment strategies. The inability to completely characterize the cellular architecture of myeloid neoplasms and link it to outcomes has limited our ability to manage and cure patients. Recent advancements in single cell technologies [<strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong>] (Figure 1) can provide methods for addressing these limitations by allowing researchers to characterize blood cells with high resolution. However, as the field of single cell genomics expands at unprecedented rates, it is increasingly important to develop a rigorous framework for interpreting and validating important single cell observations with orthogonal computational and functional studies to provide meaningful services for patients. We have developed such a framework for studying normal and malignant hematopoiesis which has allowed us to identify new HSPCs in adult hematopoiesis [<strong style="color:#404040ff"><a href="/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong>] (Figure 2), and clinically high-risk <strong style="color:#404040ff">leukemia stem cells (LSCs)</strong> in <strong style="color:#404040ff">adult acute myeloid leukemia (AML)</strong> at high resolution.</p>
 </div>
 
 <div id="Introduction2" class="col-sm-12">
-	<figure style="margin: 20px auto; text-align: center;">
-		<img src="/img/research/updated-heme.jpg" alt="hematopoiesis" style="width: 100%; max-width: 100%; display: block; margin: 0 auto;">
-		<figcaption style="font-size: 0.9em; color: #404040ff; text-align: left; margin-top: 5px;">Figure 2: An updated model of adult human hematopoiesis.<br><strong style="color:#404040ff"><a href = "/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong></figcaption>
-	</figure>
+  <figure class="research-feature">
+    <img src="/img/research/updated-heme.jpg" alt="hematopoiesis">
+    <figcaption>Figure 2: An updated model of adult human hematopoiesis. <strong style="color:#404040ff"><a href="/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong></figcaption>
+  </figure>
 </div>
 
-<div id="Introduction3" class="col-sm-12">
-    <div class="row">
-        <div class="col-sm-5" style="text-align: center">
-            <img src="/img/research/csc-model.jpg" style="width: {% if pub.imageWidth %}{{pub.imageWidth}}{% else %}100%{% endif %} !important; height: auto !important;"><br>
-			<figcaption style="font-size: 0.9em; color: #404040ff; text-align: left; margin-top: 5px;">Figure 3: The LSC model of AML. <br> <strong style="color:#404040ff"><a href = "/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
-        </div>
-        <div class="col-sm-7" style="text-align: justify">
-            <p>We are now using these methods to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
-            <p>Specifically, we will answer several important questions using the cancer stem cell model as a reference. First, how do <strong style="color:#404040ff">cancer stem cells (CSCs)</strong> emerge from healthy HSPCs, and can we identify features that distinguish CSCs from <strong style="color:#404040ff">preleukemic HSCs (pHSCs)</strong> and healthy HSPCs (Project 1)? Can we use this framework to study CSCs across other myeloid neoplasms (Project 2)? Finally, can we use this information to improve clinical disease monitoring assays and develop CSC targeted therapies to cure patients (Project 3)?</p>
-        </div>
+<div id="Introduction3" class="col-sm-12 research-section">
+  <div class="research-grid">
+    <figure class="research-grid-image">
+      <img src="/img/research/csc-model.jpg" alt="LSC model">
+      <figcaption>Figure 3: The LSC model of AML. <strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
+    </figure>
+    <div class="research-grid-text">
+      <p>We are now using these methods to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
+      <p>Specifically, we will answer several important questions using the cancer stem cell model as a reference. First, how do <strong style="color:#404040ff">cancer stem cells (CSCs)</strong> emerge from healthy HSPCs, and can we identify features that distinguish CSCs from <strong style="color:#404040ff">preleukemic HSCs (pHSCs)</strong> and healthy HSPCs (Project 1)? Can we use this framework to study CSCs across other myeloid neoplasms (Project 2)? Finally, can we use this information to improve clinical disease monitoring assays and develop CSC targeted therapies to cure patients (Project 3)?</p>
     </div>
+  </div>
 </div>
 
 
