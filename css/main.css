@@ -794,9 +794,18 @@ pre {
 /* added */
 
 .banner {
-  width: 100vw;
+  width: 100%;
   margin-top: 49px;
   margin-bottom: 10px;
+  text-align: center;
+  background-color: #9d4844;
+}
+.banner img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
 }
 .clear{
   clear: both;
