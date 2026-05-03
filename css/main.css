@@ -873,6 +873,14 @@ p, li, td, th {
     padding-right: 12px;
   }
 
+  /* Match Bootstrap row negative margins to the reduced container padding
+     so rows don't poke 3px beyond the viewport (which made the fixed navbar
+     appear wider than the banner when swiping horizontally on mobile). */
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
   /* Reduce jumbotron padding */
   .jumbotron {
     padding-left: 14px;
