@@ -71,7 +71,7 @@ subtitle: Asiri Lab Resources
 }
 </style>
 
-# **Resources**
+# **Internal Resources**
 
 <div class="resources-list">
 {% for item in site.data.Internal_Resources %}
