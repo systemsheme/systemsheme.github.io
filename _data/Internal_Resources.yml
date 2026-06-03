@@ -5,5 +5,5 @@
 
 - title: Processing single cell multi-omics data
   image: /img/resources/bloodreview.jpeg
-  imageLink: https://github.com/systemsheme/internal/single-cell-multi-omics.qmd
-  description: "A guide ..."
+  imageLink: https://web.stanford.edu/~asiri/single-cell-manual
+  description: "This manual provides a reproducible workflow for processing single-cell multi-omic data, specifically optimized for adult human bone marrow and peripheral blood samples. It includes detailed instructions for data preprocessing, quality control, and analysis using state-of-the-art tools and techniques."
