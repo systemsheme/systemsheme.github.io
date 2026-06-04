@@ -77,7 +77,7 @@ subtitle: Asiri Lab Resources
 {% for item in site.data.Resources %}
 <div id="{{item.title}}" class="resource-card" style="scroll-margin-top: 80px;">
   <div class="resource-media">
-    <a href="{{item.imageLink}}" target="_blank" rel="noopener"><img src="{{item.image}}" alt="{{item.title}}"></a>
+    {% if item.imageLink %}<a href="{{item.imageLink}}" target="_blank" rel="noopener"><img src="{{item.image}}" alt="{{item.title}}"></a>{% else %}<img src="{{item.image}}" alt="{{item.title}}">{% endif %}
   </div>
   <div class="resource-body">
     <h5>{{item.title}}</h5>
