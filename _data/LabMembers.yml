@@ -58,6 +58,17 @@
   # twitter: ""
   description: "I'm a freshman at Stanford University interested in bioinformatics, computer science, and artificial intelligence. I grew up in Dublin, California and have worked on research projects in the past with computer vision for brain and dental disease detection, as well as contributed to correlation studies on brain fMRI and structural MRI data. I'm passionate about using artificial intelligence to solve problems in healthcare and biomedicine, especially through machine learning models, and am excited to work on developing new computational methods for studying hematopoiesis and myeloid cancers in the Asiri Lab! In my free time, you can find me hiking, playing games, or just hanging out with friends."
 
+- name: Maria Chiara Grondelli, M.D.
+  lastname: Grondelli
+  image: /img/members/Grondelli_Picture.jpg
+  altimage: /img/members/Grondelli_Picture.jpg
+  position: AICF Postdoctoral Scholar
+  email: mchiarag (at) stanford.edu
+  # scholar:
+  # orcid: ""
+  # twitter: ""
+  description: "I was born and raised in Parma, Italy, and moved to Milan to train simultaneously as a physician and an engineer through MEDTEC School, graduating in its first cohort with a dual degree: an M.D. in Medicine and Surgery from Humanitas University and a B.Sc. in Biomedical Engineering from Politecnico di Milano. During my medical training I joined the Center for Accelerating Leukemia/Lymphoma Research (CALR) in Milan, where I built and validated machine learning tools for AI-based digital pathology in myeloid neoplasms – the focus of my M.D. thesis – and explored LLM-driven workflows for medical information retrieval and synthetic histopathology, work presented in four abstracts at the 65th and 66th ASH Annual Meetings. Internships at Memorial Sloan Kettering Cancer Center and Weill Cornell Medicine gave me my first hands-on experience of U.S. research. In the Asiri Lab, I am building a machine learning model that uses multi-omic single-cell data to distinguish pre-malignant clonal hematopoietic stem cells from malignant cancer stem cells. Curiosity and passion drive me in and out of the lab: some of my hobbies include mountaineering, reading, and writing."
+
 - name: Erika Chengxiang Li
   lastname: Li
   image: /img/members/erika.png
