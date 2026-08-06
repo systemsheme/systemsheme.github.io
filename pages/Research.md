@@ -123,13 +123,17 @@ subtitle: Asiri Lab Research
 	</div>
 </div>
 
-<div class="container logos-container">
+<div class="container logos-container" style="flex-direction: column;">
 	<figure class="fifth">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" style="height: 30px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" style="height: 27px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" style="height: 37px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" style="height: 52px">
+	</figure>
+	<figure class="fifth">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" style="height: 50px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" style="height: 37px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" style="height: 42px">
 	</figure>
 	<p><br></p>
 </div>
