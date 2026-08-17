@@ -15,188 +15,189 @@ subtitle: Asiri Lab Members
   </div>
 </div>
 
-{% assign pi_members = site.data.LabMembers | where: "position", "Principal Investigator" %}
-{% assign other_members = site.data.LabMembers | where_exp: "person", "person.position != 'Principal Investigator'" | sort: "lastname" %}
+{% assign all_members = site.data.LabMembers | sort: "lastname" %}
 
-<!-- ── PI Section ─────────────────────────────────────────────── -->
-{% for person in pi_members %}
-<div class="container" style="margin-bottom: 10px;">
-  <div class="row pi-section-row">
-    <div class="col-xs-4 col-sm-4">
-      <img class="img-responsive" src="{{ person.image }}"
-        {% if person.altimage %}
-          onmouseover="this.src='{{ person.altimage }}';"
-          onmouseout="this.src='{{ person.image }}';"
-        {% endif %}
-        alt="{{ person.name }}">
-      <div style="margin-top: 8px; font-size: 17px;">
-        <strong>{{ person.name }}</strong><br>
-        {% if person.pronouns %}<em>{{ person.pronouns }}</em><br>{% endif %}
-        {{ person.position }}<br>
-        {% if person.advisor %}{{ person.advisor }}<br>{% endif %}
-        <em>{{ person.email }}</em><br>
-        {% if person.scholar %}<a href="http://scholar.google.com/citations?user={{ person.scholar }}"><span class="fa fa-graduation-cap"></span> Google Scholar</a><br>{% endif %}
-        {% if person.orcid %}<a href="https://orcid.org/{{ person.orcid }}"><span class="fa fa-book"></span> ORCID</a><br>{% endif %}
-        {% if person.bluesky %}<a href="http://bsky.app/profile/{{ person.bluesky }}"><span class="fab fa-bluesky"></span> @{{ person.bluesky }}</a><br>{% endif %}
-        {% if person.website %}<a href="{{ person.website }}"><span class="fa fa-rss"></span> {{ person.website }}</a><br>{% endif %}
-      </div>
-    </div>
-    <div class="col-xs-8 col-sm-8" style="text-align: justify; font-size: 17px;">
-      {{ person.description | markdownify }}
-    </div>
-  </div>
-</div>
-{% endfor %}
-
-<!-- ── Team Member Slider ────────────────────────────────────── -->
+<!-- ── Team heading ──────────────────────────────────────────── -->
 <div class="container" style="margin-top: 40px;">
-  <h4 style="margin-bottom: 20px;">Lab Members</h4>
-  <hr style="margin-top:0;">
+  <h4 class="tm-heading">Meet the Team</h4>
+  <div class="tm-heading-bar"></div>
+  <p class="tm-subhead">Hover over a photo to read each person's bio. <span class="tm-touch-hint">Tap a photo to read the bio.</span></p>
 </div>
 
-<div class="container tm-slider-outer">
-  <div class="tm-slider-row" id="teamSlider">
-    <button class="tm-arrow tm-prev" aria-label="Previous">&#8249;</button>
-    <div class="tm-viewport">
-      <div class="tm-track">
-        {% for person in other_members %}
-        <div class="tm-slide">
-          <div class="row">
-            <div class="col-sm-4">
-              <img class="img-responsive" src="{{ person.image }}"
-                {% if person.altimage %}
-                  onmouseover="this.src='{{ person.altimage }}';"
-                  onmouseout="this.src='{{ person.image }}';"
-                {% endif %}
-                alt="{{ person.name }}">
-              <div style="margin-top: 8px; font-size: 17px;">
-                <strong>{{ person.name }}</strong><br>
-                {% if person.pronouns %}<em>{{ person.pronouns }}</em><br>{% endif %}
-                {{ person.position }}<br>
-                {% if person.advisor %}{{ person.advisor }}<br>{% endif %}
-                <em>{{ person.email }}</em><br>
-                {% if person.scholar %}<a href="http://scholar.google.com/citations?user={{ person.scholar }}"><span class="fa fa-graduation-cap"></span> Google Scholar</a><br>{% endif %}
-                {% if person.orcid %}<a href="https://orcid.org/{{ person.orcid }}"><span class="fa fa-book"></span> ORCID</a><br>{% endif %}
-                {% if person.bluesky %}<a href="http://bsky.app/profile/{{ person.bluesky }}"><span class="fab fa-bluesky"></span> @{{ person.bluesky }}</a><br>{% endif %}
-                {% if person.website %}<a href="{{ person.website }}"><span class="fa fa-rss"></span> {{ person.website }}</a><br>{% endif %}
-              </div>
-            </div>
-            <div class="col-sm-8" style="text-align: justify; font-size: 17px;">
-              {{ person.description | markdownify }}
-            </div>
-          </div>
+<!-- ── Responsive team grid ──────────────────────────────────── -->
+<div class="container">
+  <div class="tm-grid">
+    {% for person in all_members %}
+    <div class="tm-card">
+      <div class="tm-photo-wrap">
+        <img src="{{ person.image }}" alt="{{ person.name }}" loading="lazy">
+        <div class="tm-overlay">
+          <div class="tm-overlay-inner">{{ person.description | markdownify }}</div>
         </div>
-        {% endfor %}
+      </div>
+      <div class="tm-meta">
+        <div class="tm-name">{{ person.name }}</div>
+        <div class="tm-position">{{ person.position }}</div>
+        <div class="tm-links">
+          {% if person.email %}<a href="mailto:{{ person.email | replace: ' (at) ', '@' }}" title="Email"><span class="fa fa-envelope"></span></a>{% endif %}
+          {% if person.scholar %}<a href="http://scholar.google.com/citations?user={{ person.scholar }}" title="Google Scholar"><span class="fa fa-graduation-cap"></span></a>{% endif %}
+          {% if person.orcid %}<a href="https://orcid.org/{{ person.orcid }}" title="ORCID"><span class="fa fa-book"></span></a>{% endif %}
+          {% if person.bluesky %}<a href="http://bsky.app/profile/{{ person.bluesky }}" title="Bluesky"><span class="fab fa-bluesky"></span></a>{% endif %}
+          {% if person.website %}<a href="{{ person.website }}" title="Website"><span class="fa fa-rss"></span></a>{% endif %}
+        </div>
       </div>
     </div>
-    <button class="tm-arrow tm-next" aria-label="Next">&#8250;</button>
-  </div>
-  <div class="tm-dots-row">
-    {% for person in other_members %}
-    <button class="tm-dot{% if forloop.first %} tm-dot-active{% endif %}" aria-label="Slide {{ forloop.index }}"></button>
     {% endfor %}
   </div>
 </div>
 
 <style>
-.tm-slider-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
+/* ── Section heading ── */
+.tm-heading {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
 }
-.tm-arrow {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #bbb;
-  background: #fff;
-  color: #555;
-  font-size: 26px;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.2s, color 0.2s;
-  padding: 0 0 2px 0;
+.tm-heading-bar {
+  width: 52px;
+  height: 3px;
+  background: #9d4844;
+  border-radius: 2px;
+  margin-bottom: 14px;
 }
-.tm-arrow:hover {
-  border-color: #9d4844;
-  color: #9d4844;
+.tm-subhead {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 34px;
 }
-.tm-viewport {
-  flex: 1;
-  overflow: hidden;
-}
-.tm-track {
-  display: flex;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-.tm-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 0 16px;
-}
-.tm-dots-row {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 18px 0 30px;
-}
-.tm-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: #c8c8c8;
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.2s;
-}
-.tm-dot-active { background: #555; }
 
+/* ── Responsive grid: column count adapts to the viewport width ── */
+.tm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px 26px;
+  margin-bottom: 60px;
+}
+
+/* ── Card ── */
+.tm-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.32s cubic-bezier(.2,.7,.2,1), box-shadow 0.32s ease;
+  display: flex;
+  flex-direction: column;
+}
+.tm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(157,72,68,0.20);
+}
+
+.tm-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #f2f3f5;
+}
+.tm-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.tm-card:hover .tm-photo-wrap img,
+.tm-card.tm-active .tm-photo-wrap img { transform: scale(1.06); }
+
+/* ── Hover bio: white background, scrollable, brand accent ── */
+.tm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.97);
+  color: #3a3a3a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: default;
+}
+.tm-card:hover .tm-overlay,
+.tm-card.tm-active .tm-overlay { opacity: 1; }
+.tm-overlay-inner {
+  height: 100%;
+  overflow-y: auto;
+  padding: 13px 15px;
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: left;
+}
+.tm-overlay-inner p { margin: 0 0 8px; }
+.tm-overlay-inner p:last-child { margin-bottom: 0; }
+.tm-overlay-inner a { color: #9d4844; font-weight: 600; }
+.tm-overlay-inner::-webkit-scrollbar { width: 6px; }
+.tm-overlay-inner::-webkit-scrollbar-track { background: #f2f2f2; }
+.tm-overlay-inner::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 3px; }
+
+/* ── Meta ── */
+.tm-meta { padding: 15px 16px 18px; }
+.tm-name {
+  font-weight: 700;
+  font-size: 15.5px;
+  color: #2b2b2b;
+  line-height: 1.3;
+}
+.tm-position {
+  color: #9d4844;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 5px;
+}
+.tm-links { margin-top: 12px; display: flex; gap: 8px; }
+.tm-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f4dddb;
+  color: #9d4844;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.tm-links a:hover {
+  background: #9d4844;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.tm-touch-hint { display: none; }
+@media (hover: none) { .tm-touch-hint { display: inline; } }
+
+/* ── Phones: two columns ── */
 @media (max-width: 576px) {
-  .tm-arrow { width: 28px; height: 28px; font-size: 18px; border-width: 1px; }
-  .tm-slide { padding: 0 6px; }
-  .tm-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
-  .tm-slide .col-sm-4 { width: 38% !important; flex: 0 0 38%; padding-right: 8px; font-size: 13px !important; }
-  .tm-slide .col-sm-8 { display: block; width: 62% !important; flex: 0 0 62%; font-size: 13px !important; }
-  .pi-section-row .col-xs-8 { font-size: 13px !important; }
+  .tm-grid { grid-template-columns: repeat(2, 1fr); gap: 18px 14px; }
+  .tm-meta { padding: 12px 12px 14px; }
+  .tm-overlay-inner { font-size: 10.5px; line-height: 1.4; padding: 10px; }
+  .tm-name { font-size: 13.5px; }
+  .tm-position { font-size: 10px; }
+  .tm-links a { width: 27px; height: 27px; font-size: 12px; }
 }
 </style>
 
 <script>
 (function () {
-  var slider  = document.getElementById('teamSlider');
-  var track   = slider.querySelector('.tm-track');
-  var dots    = document.querySelectorAll('.tm-dot');
-  var prev    = slider.querySelector('.tm-prev');
-  var next    = slider.querySelector('.tm-next');
-  var total   = dots.length;
-  var current = 0;
-
-  function goTo(idx) {
-    current = (idx + total) % total;
-    track.style.transform = 'translateX(-' + (current * 100) + '%)';
-    dots.forEach(function (d, i) {
-      d.classList.toggle('tm-dot-active', i === current);
+  var cards = document.querySelectorAll('.tm-grid .tm-card');
+  // Tap-to-reveal on touch devices (no hover there)
+  cards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;          // let links work
+      var wasActive = card.classList.contains('tm-active');
+      cards.forEach(function (c) { c.classList.remove('tm-active'); });
+      if (!wasActive) card.classList.add('tm-active');
     });
-  }
-
-  prev.addEventListener('click', function () { goTo(current - 1); });
-  next.addEventListener('click', function () { goTo(current + 1); });
-  dots.forEach(function (d, i) {
-    d.addEventListener('click', function () { goTo(i); });
   });
-
-  var vp = slider.querySelector('.tm-viewport');
-  var touchStartX = 0;
-  vp.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive: true});
-  vp.addEventListener('touchend', function(e) {
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
-  }, {passive: true});
 })();
 </script>
