@@ -80,6 +80,17 @@
   # twitter: ""
   description: "I'm currently a junior at Stanford University studying Computer Science with a concentration in Systems. I grew up in Orange County, California, where I first learned how to code. Since coming to Stanford, I've become passionate about applying AI to real-world systems that leverage big data—particularly in healthcare, where I've been working on using large language models (LLMs) to process and analyze unstructured data. In my free time, I'm an active member of aKDPhi, Stanford's Asian-interest sorority, and I love going on long walks and exploring nature. In the Asiri Lab, I'm developing computational tools that use LLMs to interrogate large datasets in both healthy and malignant hematopoiesis"
 
+- name: Shutong Li, M.B., M.D.S., Ph.D.
+  lastname: Li
+  image: /img/members/shutongl.png
+  altimage: /img/members/shutongl.png
+  position: Postdoctoral Scholar
+  email: shutongl (at) stanford.edu
+  scholar: https://scholar.google.com/citations?user=1wGBAMMAAAAJ&hl=en&oi=ao
+  orcid: "0000-0001-7378-5740"
+  # twitter: "N/A"
+  description: "I grew up in China and earned my combined Bachelor’s and Master’s degrees at Shandong University, where I majored in Dental Medicine and my research on oral cancer and inflammation sparked my interests in understanding the mechanisms underlying human diseases. I then pursued my PhD in Craniofacial Biology at the University of Southern California, where I studied cancer-associated pathogens, with a focus on how immune pathways regulate their pathogenesis. There, I received extensive training in cell biology, molecular biology, and multi-omics technologies. In the Asiri Lab, I am dissecting the mechanisms of cancer stem cell pathogenesis in human blood cancers, with a focus on how cancer-specific molecular dependencies regulate cancer stem cell fitness. My goal is to identify vulnerabilities that can be exploited for cancer interception and targeted therapy. Outside of research, I am an amateur photographer and enjoy outdoor activities with my dog Jojo."
+
 - name: Kotoha Togami, B.S.
   lastname: Togami
   image: /img/members/kotoha.jpeg
