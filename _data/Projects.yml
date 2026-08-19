@@ -1,0 +1,19 @@
+# Active Projects shown on the Research page.
+# Add, remove, or reorder entries here — the Research page grid updates automatically.
+# Fields: title (required), image, caption, description. HTML is allowed in
+# description/caption; use single quotes for any inline style attributes.
+
+- title: "Project #1: Stem cells in healthy and malignant hematopoiesis"
+  image: /img/research/project1.png
+  caption: "Figure 4: Cancer stem cell model"
+  description: "Identifying CSCs, pHSCs, and healthy HSPCs requires confirming both the clonal nature of the cell and its functional capacity <em>in vivo</em>. We are developing single cell methods for both lineage tracing and multi-omic profiling to enhance functional and mechanistic studies in CSC pathogenesis. Our long term goal is to use these methods to develop stem cell specific clinical biomarker assays."
+
+- title: "Project #2: Stem cell architecture in myeloid neoplasms"
+  image: /img/research/project2.png
+  caption: "Figure 5: Cellular hierarchies in myeloid malignancies"
+  description: "Myeloid CSCs are poorly defined in myeloid cancers like <strong style='color:#404040ff'>myelodysplastic neoplasms (MDS)</strong>, <strong style='color:#404040ff'>myeloproliferative neoplasms (MPN)</strong>, <strong style='color:#404040ff'>systemic mastocytosis (SM)</strong>, and <strong style='color:#404040ff'>chronic myelomonocytic leukemia (CMML)</strong>. We are currently applying our multi-omic single cell methods to study myeloid CSCs across myeloid malignancies. Through collaborations with multiple clinical investigators at Stanford and beyond, we are acquiring pre and on-treatment samples from patients receiving standard and novel anti-cancer therapies. These samples are being profiled prospectively with the goal of defining the cellular architecture across myeloid neoplasms on treatment using both single cell and bulk molecular profiling methods and functional hematologic assays."
+
+- title: "Project #3: Predictive models and clinical assays"
+  image: /img/research/project3.png
+  caption: "Figure 6: Predictive models"
+  description: "A long-term goal is to improve the clinical management of patients with myeloid neoplasms. To address this goal, we are developing a multi-domain framework for linking neoplastic cells obtained at diagnosis and during treatment with outcomes. We are using this data to design computational models using machine learning to predict the natural history of myeloid neoplasms and its response to treatment. The goal is to develop clinical assays and predictive models to guide the study and management of myeloid cancers."

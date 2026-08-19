@@ -8,6 +8,10 @@ subtitle: Asiri Lab Research
 .research-section { margin: 30px 0; }
 .research-section h4 { margin-bottom: 16px; }
 
+/* Section headings with maroon accent (matches Team/Resources) */
+.rs-heading { font-weight: 700; color: #333; margin-bottom: 8px; }
+.rs-heading-bar { width: 56px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 26px; }
+
 /* Float layout (long text wraps around image) */
 .research-float-section { overflow: hidden; }
 .research-float-figure {
@@ -18,9 +22,12 @@ subtitle: Asiri Lab Research
 }
 .research-float-figure img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
   display: block;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 .research-float-figure figcaption {
   font-size: 0.85em;
@@ -42,7 +49,8 @@ subtitle: Asiri Lab Research
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.10);
 }
 .research-feature figcaption {
   font-size: 0.9em;
@@ -62,9 +70,12 @@ subtitle: Asiri Lab Research
 .research-grid-image { flex: 0 0 calc(40% - 14px); margin: 0; }
 .research-grid-image img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
   display: block;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 .research-grid-image figcaption {
   font-size: 0.85em;
@@ -86,6 +97,191 @@ subtitle: Asiri Lab Research
   line-height: 1.65;
 }
 
+/* Click-to-enlarge figures */
+.research-float-figure img,
+.research-feature img,
+.research-grid-image img { cursor: zoom-in; }
+.rf-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.86);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 28px;
+  cursor: zoom-out;
+}
+.rf-lightbox.open { display: flex; }
+.rf-lightbox img {
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 10px 44px rgba(0,0,0,0.55);
+}
+.rf-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 3px 0;
+}
+.rf-lightbox-close:hover { background: rgba(255,255,255,0.32); }
+
+/* ── Funding / supporters band ── */
+.funding-section {
+  text-align: center;
+  margin: 34px auto 26px;
+  padding: 28px 10px 30px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+.funding-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9d4844;
+  margin: 0 0 24px;
+}
+.funding-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 34px 52px;
+}
+.funding-logos img {
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.funding-logos img:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+@media (max-width: 576px) {
+  .funding-logos { gap: 26px 32px; }
+  .funding-logos img { transform: scale(0.85); }
+}
+
+/* ── Active Projects: card grid with hover-reveal (matches Team page) ── */
+/* Horizontal slider: single row, scroll/swipe to see more */
+.rp-scroller { position: relative; margin: 4px 0 55px; padding: 0 54px; }
+.rp-grid {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 4px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #cfcfcf #f2f2f2;
+}
+.rp-grid::-webkit-scrollbar { height: 8px; }
+.rp-grid::-webkit-scrollbar-track { background: #f2f2f2; border-radius: 4px; }
+.rp-grid::-webkit-scrollbar-thumb { background: #cfcfcf; border-radius: 4px; }
+.rp-grid::-webkit-scrollbar-thumb:hover { background: #b5b5b5; }
+.rp-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.32s cubic-bezier(.2,.7,.2,1), box-shadow 0.32s ease;
+  display: flex;
+  flex-direction: column;
+}
+.rp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(157,72,68,0.20);
+}
+
+/* Slider navigation arrows (desktop) */
+.rp-nav {
+  position: absolute;
+  top: 160px;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #9d4844;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 3px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  z-index: 5;
+  transition: background 0.2s;
+}
+.rp-nav:hover { background: #6f2f2c; }
+.rp-nav-prev { left: 2px; }
+.rp-nav-next { right: 2px; }
+.rp-nav[hidden] { display: none; }
+
+.rp-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+}
+.rp-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+  transition: transform 0.5s ease;
+}
+.rp-card:hover .rp-photo-wrap img,
+.rp-card.rp-active .rp-photo-wrap img { transform: scale(1.04); }
+
+/* Hover reveals description: white, scrollable */
+.rp-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.97);
+  color: #3a3a3a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: default;
+}
+.rp-card:hover .rp-overlay,
+.rp-card.rp-active .rp-overlay { opacity: 1; }
+.rp-overlay-inner {
+  height: 100%;
+  overflow-y: auto;
+  padding: 16px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+}
+.rp-overlay-inner::-webkit-scrollbar { width: 6px; }
+.rp-overlay-inner::-webkit-scrollbar-track { background: #f2f2f2; }
+.rp-overlay-inner::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 3px; }
+
+.rp-meta { padding: 15px 18px 18px; }
+.rp-title { color: #9d4844; font-weight: 700; font-size: 1.1rem; line-height: 1.3; margin: 0; }
+
 @media (max-width: 768px) {
   .research-float-figure {
     float: none;
@@ -105,6 +301,11 @@ subtitle: Asiri Lab Research
   .research-grid { flex-direction: column; gap: 16px; align-items: stretch; }
   .research-grid-image,
   .research-grid-text { flex: 1 1 100%; }
+  .rp-title { font-size: 1.05rem; }
+  .rp-overlay-inner { font-size: 12px; line-height: 1.5; padding: 13px; }
+  .rp-card { flex: 0 0 80%; }
+  .rp-nav { display: none; }
+  .rp-scroller { padding: 0; }
 }
 </style>
 
@@ -123,27 +324,23 @@ subtitle: Asiri Lab Research
 	</div>
 </div>
 
-<div class="container logos-container" style="flex-direction: column;">
-	<figure class="fifth">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" style="height: 30px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" style="height: 27px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" style="height: 37px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" style="height: 52px">
-	</figure>
-	<figure class="fifth">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" style="height: 50px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" style="height: 37px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" style="height: 42px">
-	</figure>
-	<p><br></p>
+<div class="container funding-section">
+	<p class="funding-label">Supported By</p>
+	<div class="funding-logos">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" alt="National Cancer Institute" style="height: 50px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" alt="Ludwig Cancer Research" style="height: 46px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" alt="Evans MDS" style="height: 62px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" alt="American Society of Hematology" style="height: 84px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" alt="Blueprint Medicines" style="height: 80px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging" style="height: 60px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation" style="height: 68px">
+	</div>
 </div>
 
-<div align="left">
-	<h1>
-		<strong>Current Research</strong>
-	</h1>
+<div class="col-sm-12" style="margin-top: 20px;">
+	<h1 class="rs-heading"><strong>Current Research</strong></h1>
+	<div class="rs-heading-bar"></div>
 </div>
-<hr>
 
 <div id="Introduction1" class="col-sm-12 research-section research-float-section">
   <h4><u>Introduction</u></h4>
@@ -174,104 +371,102 @@ subtitle: Asiri Lab Research
   </div>
 </div>
 
-
-<div class="col-sm-12">
-	<hr>
-	<h2><strong>Active Projects</strong></h2>
-	<hr>
+<div class="col-sm-12" style="margin-top: 40px;">
+	<h2 class="rs-heading"><strong>Active Projects</strong></h2>
+	<div class="rs-heading-bar"></div>
 </div>
 
-<!-- Project Slider: show/hide approach, no CSS transforms -->
-<div class="col-sm-12" id="projectSlider">
-
-  <div class="rp-slide" id="rp-slide-0">
-    <h4><u>Project #1: Stem cells in healthy and malignant hematopoiesis</u></h4>
-    <div class="row" style="font-size:17px;">
-      <div class="col-sm-5" style="text-align:center;">
-        <img src="/img/research/project1.png" class="img-responsive" alt="Project 1" style="width:100%;height:auto;">
-        <figcaption style="font-size:0.9em;color:#404040ff;text-align:left;margin-top:5px;">Figure 4: Cancer stem cell model</figcaption>
+<div class="col-sm-12">
+  <div class="rp-scroller">
+    <button class="rp-nav rp-nav-prev" id="rpPrev" aria-label="Previous projects">&#8249;</button>
+    <div class="rp-grid" id="projectGrid">
+    {% for project in site.data.Projects %}
+      <div class="rp-card">
+        <div class="rp-photo-wrap">
+          {% if project.image %}<img src="{{ project.image }}" alt="{{ project.title }}">{% endif %}
+          <div class="rp-overlay"><div class="rp-overlay-inner">{{ project.description }}</div></div>
+        </div>
+        <div class="rp-meta">
+          <h4 class="rp-title">{{ project.title }}</h4>
+        </div>
       </div>
-      <div class="col-sm-7" style="text-align:justify;">
-        <p>Identifying CSCs, pHSCs, and healthy HSPCs requires confirming both the clonal nature of the cell and its functional capacity <em>in vivo</em>. We are developing single cell methods for both lineage tracing and multi-omic profiling to enhance functional and mechanistic studies in CSC pathogenesis. Our long term goal is to use these methods to develop stem cell specific clinical biomarker assays.</p>
-      </div>
+    {% endfor %}
     </div>
+    <button class="rp-nav rp-nav-next" id="rpNext" aria-label="More projects">&#8250;</button>
   </div>
-
-  <div class="rp-slide" id="rp-slide-1" style="display:none;">
-    <h4><u>Project #2: Stem cell architecture in myeloid neoplasms</u></h4>
-    <div class="row" style="font-size:17px;">
-      <div class="col-sm-5" style="text-align:center;">
-        <img src="/img/research/project2.png" class="img-responsive" alt="Project 2" style="width:65%;height:auto;margin:0 auto;display:block;">
-        <figcaption style="font-size:0.9em;color:#404040ff;text-align:left;margin-top:5px;">Figure 5: Cellular hierarchies in myeloid malignancies</figcaption>
-      </div>
-      <div class="col-sm-7" style="text-align:justify;">
-        <p>Myeloid CSCs are poorly defined in myeloid cancers like <strong style="color:#404040ff">myelodysplastic neoplasms (MDS)</strong>, <strong style="color:#404040ff">myeloproliferative neoplasms (MPN)</strong>, <strong style="color:#404040ff">systemic mastocytosis (SM)</strong>, and <strong style="color:#404040ff">chronic myelomonocytic leukemia (CMML)</strong>. We are currently applying our multi-omic single cell methods to study myeloid CSCs across myeloid malignancies. Through collaborations with multiple clinical investigators at Stanford and beyond, we are acquiring pre and on-treatment samples from patients receiving standard and novel anti-cancer therapies. These samples are being profiled prospectively with the goal of defining the cellular architecture across myeloid neoplasms on treatment using both single cell and bulk molecular profiling methods and functional hematologic assays.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="rp-slide" id="rp-slide-2" style="display:none;">
-    <h4><u>Project #3: Predictive models and clinical assays</u></h4>
-    <div class="row" style="font-size:17px;">
-      <div class="col-sm-5" style="text-align:center;">
-        <img src="/img/research/project3.png" class="img-responsive" alt="Project 3" style="width:100%;height:auto;">
-        <figcaption style="font-size:0.9em;color:#404040ff;text-align:left;margin-top:5px;">Figure 6: Predictive models</figcaption>
-      </div>
-      <div class="col-sm-7" style="text-align:justify;">
-        <p>A long-term goal is to improve the clinical management of patients with myeloid neoplasms. To address this goal, we are developing a multi-domain framework for linking neoplastic cells obtained at diagnosis and during treatment with outcomes. We are using this data to design computational models using machine learning to predict the natural history of myeloid neoplasms and its response to treatment. The goal is to develop clinical assays and predictive models to guide the study and management of myeloid cancers.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:24px;">
-    <button id="rp-prev" style="width:40px;height:40px;border-radius:50%;border:2px solid #bbb;background:#fff;color:#555;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 2px 0;">&#8249;</button>
-    <span id="rp-dots" style="display:flex;gap:8px;">
-      <button class="rp-dot rp-dot-on" data-i="0" style="width:12px;height:12px;border-radius:50%;border:none;background:#555;cursor:pointer;padding:0;"></button>
-      <button class="rp-dot" data-i="1" style="width:12px;height:12px;border-radius:50%;border:none;background:#c8c8c8;cursor:pointer;padding:0;"></button>
-      <button class="rp-dot" data-i="2" style="width:12px;height:12px;border-radius:50%;border:none;background:#c8c8c8;cursor:pointer;padding:0;"></button>
-    </span>
-    <button id="rp-next" style="width:40px;height:40px;border-radius:50%;border:2px solid #bbb;background:#fff;color:#555;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 2px 0;">&#8250;</button>
-  </div>
-
 </div>
 
 <script>
-(function(){
-  var total   = 3;
-  var current = 0;
+(function () {
+  var grid  = document.getElementById('projectGrid');
+  if (!grid) return;
+  var cards = grid.querySelectorAll('.rp-card');
+  var prev  = document.getElementById('rpPrev');
+  var next  = document.getElementById('rpNext');
 
-  function goTo(n) {
-    document.getElementById('rp-slide-' + current).style.display = 'none';
-    current = (n + total) % total;
-    document.getElementById('rp-slide-' + current).style.display = 'block';
-    document.querySelectorAll('.rp-dot').forEach(function(d) {
-      d.style.background = (parseInt(d.getAttribute('data-i')) === current) ? '#555' : '#c8c8c8';
-    });
+  function step() {
+    var card = grid.querySelector('.rp-card');
+    return card ? card.getBoundingClientRect().width + 26 : 320;
   }
+  prev.addEventListener('click', function () { grid.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { grid.scrollBy({ left:  step(), behavior: 'smooth' }); });
 
-  document.getElementById('rp-prev').addEventListener('click', function(){ goTo(current - 1); });
-  document.getElementById('rp-next').addEventListener('click', function(){ goTo(current + 1); });
-  document.querySelectorAll('.rp-dot').forEach(function(d){
-    d.addEventListener('click', function(){ goTo(parseInt(d.getAttribute('data-i'))); });
+  // Show arrows only when the row actually overflows; dim at the ends.
+  function updateArrows() {
+    var overflow = grid.scrollWidth > grid.clientWidth + 4;
+    var atStart  = grid.scrollLeft <= 2;
+    var atEnd    = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 2;
+    prev.hidden = !overflow;
+    next.hidden = !overflow;
+    prev.style.opacity = atStart ? 0.35 : 1;
+    next.style.opacity = atEnd   ? 0.35 : 1;
+  }
+  updateArrows();
+  grid.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+
+  // Tap-to-reveal on touch devices (no hover there)
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      var wasActive = card.classList.contains('rp-active');
+      cards.forEach(function (c) { c.classList.remove('rp-active'); });
+      if (!wasActive) card.classList.add('rp-active');
+    });
   });
-
-  var ps = document.getElementById('projectSlider');
-  var touchStartX = 0;
-  ps.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; }, {passive: true});
-  ps.addEventListener('touchend', function(e){
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
-  }, {passive: true});
 })();
 </script>
 
-<style>
-@media (max-width: 576px) {
-  .rp-slide .row { display: flex; flex-wrap: nowrap; align-items: flex-start; }
-  .rp-slide .col-sm-5 { width: 40% !important; flex: 0 0 40%; padding-right: 8px; }
-  .rp-slide .col-sm-7 { width: 60% !important; flex: 0 0 60%; font-size: 14px !important; }
-  .rp-slide h4 { font-size: 15px !important; }
-  #rp-prev, #rp-next { width: 32px !important; height: 32px !important; font-size: 20px !important; }
-}
-</style>
+<!-- Click-to-enlarge lightbox for the main research figures -->
+<div class="rf-lightbox" id="rfLightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <button class="rf-lightbox-close" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('rfLightbox');
+  if (!lb) return;
+  var lbImg = lb.querySelector('img');
+  var figs = document.querySelectorAll('.research-float-figure img, .research-feature img, .research-grid-image img');
+
+  function open(img) {
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    lbImg.removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+
+  figs.forEach(function (img) {
+    img.addEventListener('click', function () { open(img); });
+  });
+  lb.addEventListener('click', close);          // click anywhere (backdrop, image, or ✕) closes
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('open')) close();
+  });
+})();
+</script>

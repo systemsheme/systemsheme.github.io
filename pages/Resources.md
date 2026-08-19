@@ -5,84 +5,89 @@ subtitle: Asiri Lab Resources
 ---
 
 <style>
-.resources-list { margin-top: 1.5rem; }
+/* ── Page heading ── */
+.res-page-title { font-weight: 700; color: #333; margin-bottom: 10px; }
+.res-heading-bar { width: 52px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 34px; }
 
-.resource-card {
+/* ── Responsive grid (matches Team page style) ── */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px 26px;
+  margin-bottom: 60px;
+}
+
+/* ── Card ── */
+.res-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.32s cubic-bezier(.2,.7,.2,1), box-shadow 0.32s ease;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+.res-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(157,72,68,0.20);
+}
+
+.res-media {
+  height: 175px;
+  background: #f7f7f8;
+  border-bottom: 1px solid #ededed;
+  display: flex;
   align-items: center;
-  gap: 1.75rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  justify-content: center;
+  padding: 18px;
 }
-.resource-card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
-}
-
-.resource-card .resource-media {
-  flex: 0 0 220px;
-  max-width: 220px;
-  text-align: center;
-}
-.resource-card .resource-media a {
-  display: inline-block;
-  width: 100%;
-}
-.resource-card .resource-media img {
-  width: 100%;
-  height: auto;
-  max-height: 180px;
+.res-media a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.res-media img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 6px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease;
 }
+.res-card:hover .res-media img { transform: scale(1.04); }
 
-.resource-card .resource-body {
-  flex: 1 1 320px;
-  min-width: 0;
-}
-.resource-card .resource-body h5 {
-  margin: 0 0 0.65rem 0;
-  font-size: 1.9rem;
+.res-body { padding: 18px 20px 22px; flex: 1 1 auto; }
+.res-body h5 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #2b2b2b;
-  line-height: 1.25;
+  color: #9d4844;
+  line-height: 1.3;
 }
-.resource-card .resource-body p {
-  text-align: justify;
-  margin-bottom: 0;
+.res-body p {
+  margin: 0;
   color: #404040;
-  line-height: 1.55;
+  font-size: 13.5px;
+  line-height: 1.6;
+  text-align: left;
 }
+.res-body a { color: #9d4844; font-weight: 600; }
 
-@media (max-width: 600px) {
-  .resource-card { padding: 1rem; gap: 1rem; }
-  .resource-card .resource-media { flex: 0 0 100%; max-width: 100%; }
-  .resource-card .resource-media img { max-height: 160px; }
+@media (max-width: 576px) {
+  .res-grid { grid-template-columns: 1fr; gap: 20px; }
+  .res-media { height: 155px; }
 }
 </style>
 
-# **Resources**
+<div class="container">
+  <h1 class="res-page-title">Resources</h1>
+  <div class="res-heading-bar"></div>
 
-<div class="resources-list">
-{% for item in site.data.Resources %}
-<div id="{{item.title}}" class="resource-card" style="scroll-margin-top: 80px;">
-  <div class="resource-media">
-    {% if item.imageLink %}<a href="{{item.imageLink}}" target="_blank" rel="noopener"><img src="{{item.image}}" alt="{{item.title}}"></a>{% else %}<img src="{{item.image}}" alt="{{item.title}}">{% endif %}
+  <div class="res-grid">
+  {% for item in site.data.Resources %}
+    <div id="{{item.title}}" class="res-card" style="scroll-margin-top: 90px;">
+      <div class="res-media">
+        {% if item.imageLink %}<a href="{{item.imageLink}}" target="_blank" rel="noopener"><img src="{{item.image}}" alt="{{item.title}}"></a>{% else %}<img src="{{item.image}}" alt="{{item.title}}">{% endif %}
+      </div>
+      <div class="res-body">
+        <h5>{{item.title}}</h5>
+        {{item.description | markdownify}}
+      </div>
+    </div>
+  {% endfor %}
   </div>
-  <div class="resource-body">
-    <h5>{{item.title}}</h5>
-    {{item.description | markdownify}}
-  </div>
-</div>
-{% endfor %}
 </div>
