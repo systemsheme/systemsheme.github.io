@@ -190,12 +190,12 @@ subtitle: Asiri Lab Research
   scroll-behavior: smooth;
   padding: 10px 4px 16px;
   scrollbar-width: thin;
-  scrollbar-color: #cfcfcf #f2f2f2;
+  scrollbar-color: #9d4844 #f2f2f2;
 }
 .rp-grid::-webkit-scrollbar { height: 8px; }
 .rp-grid::-webkit-scrollbar-track { background: #f2f2f2; border-radius: 4px; }
-.rp-grid::-webkit-scrollbar-thumb { background: #cfcfcf; border-radius: 4px; }
-.rp-grid::-webkit-scrollbar-thumb:hover { background: #b5b5b5; }
+.rp-grid::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 4px; }
+.rp-grid::-webkit-scrollbar-thumb:hover { background: #6f2f2c; }
 .rp-card {
   flex: 0 0 300px;
   scroll-snap-align: start;

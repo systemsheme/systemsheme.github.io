@@ -1,14 +1,14 @@
-- title: Single cell multi-omics enables high-resolution identification and purification of human acute myeloid leukemia stem cells
+- title: Single cell multi-omics enables high-resolution identification and functional purification of human acute myeloid leukemia stem cells
   image: /img/publications/lsc.jpg
   short: High-resolution identification and purification of human AML LSCs
-  year: 2025
+  year: 2026
   authors: '___Ediriwickrema A*___, Nakauchi Y, Köhnke T,...Majeti R'
-  pubmed: 
-  pdf: 
-  journal: 
-  journalShort: 
-  journalLink: 
-  description: 'We identified and prospectively purified human AML LSCs using single-cell multi-omics and functional assays at high resolution and purity. <br><br> <em>This manuscript is currently in preparation.</em>'
+  pubmed:
+  pdf: /pdfs/2026_LSC_biorxiv.pdf
+  journal: bioRxiv
+  journalShort: bioRxiv
+  journalLink: https://www.biorxiv.org/content/10.64898/2026.07.12.737989v1
+  description: "Using single-cell multi-omics and functional xenotransplantation assays, we identified and prospectively purified human AML leukemia stem cells (LSCs) at high resolution and purity. We derived a two-gene high-risk signature (<strong style='color:#404040ff'>hrLSC2</strong>) that is strongly prognostic in de novo AML and marks a CD34+CLL1-CD90-CD69+CD53- immunophenotype significantly enriched for functional LSCs. <br><br> <em>Preprint available on <a href='https://www.biorxiv.org/content/10.64898/2026.07.12.737989v1' target='_blank'>bioRxiv</a>.</em>"
 
 - title: A single-cell framework identifies functionally and molecularly distinct multipotent progenitors in adult human hematopoiesis
   image: /img/publications/mpp.jpg

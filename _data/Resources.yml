@@ -28,10 +28,10 @@
   imageLink:  https://github.com/systemsheme/PrismR
   description: "<a href='https://github.com/systemsheme/PrismR' target='_blank'><strong style='color:#404040ff'>PrismR</strong></a> is a R Shiny app for plotting and statistics. It uses the <a href='https://csdaw.github.io/ggprism/' target='_blank'><strong style='color:#404040ff'>ggprism</strong></a> theme and palettes for visual parity with Prism, and exposes R's statistical framework through <a href='https://rpkgs.datanovia.com/rstatix/' target='_blank'><strong style='color:#404040ff'>rstatix</strong></a>. The interface is highly customizable with plotting and statistics options similar to GraphPad Prism with added 3D plotting capabilities."
 
-- title: GenAnalysis
-  image: /img/resources/gena-logo.png
-  description: "<strong style='color:#404040ff'>GenAnalysis</strong> is an open-source, native genomic-engineering workbench for macOS and iPadOS, built in Swift. It includes a gene browser (Ensembl REST), primer design, CRISPR guide design, an IGV-style BAM viewer, and NCBI BLAST sequence search. <em>Coming soon.</em>"
+# - title: GenAnalysis
+#   image: /img/resources/gena-logo.png
+#   description: "<strong style='color:#404040ff'>GenAnalysis</strong> is an open-source, native genomic-engineering workbench for macOS and iPadOS, built in Swift. It includes a gene browser (Ensembl REST), primer design, CRISPR guide design, an IGV-style BAM viewer, and NCBI BLAST sequence search. <em>Coming soon.</em>"
 
-- title: FSuite
-  image: /img/resources/fsuite-logo.png
-  description: "<strong style='color:#404040ff'>FSuite</strong> is an open-source, cross-platform desktop application for interactive flow cytometry analysis. It combines a click-to-drill gating UI (compensation editor, biex/logicle transforms, multi-plot layouts) with embedded Python and R REPLs, and exports to publication figures, MFI CSVs, and AnnData bundles for downstream scripting. <em>Coming soon.</em>"
+# - title: FSuite
+#   image: /img/resources/fsuite-logo.png
+#   description: "<strong style='color:#404040ff'>FSuite</strong> is an open-source, cross-platform desktop application for interactive flow cytometry analysis. It combines a click-to-drill gating UI (compensation editor, biex/logicle transforms, multi-plot layouts) with embedded Python and R REPLs, and exports to publication figures, MFI CSVs, and AnnData bundles for downstream scripting. <em>Coming soon.</em>"
