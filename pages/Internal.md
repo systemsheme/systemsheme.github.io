@@ -87,9 +87,11 @@ subtitle: Asiri Lab Resources
 @media (hover: none) { .res-touch-hint { display: inline; } }
 
 @media (max-width: 576px) {
-  .res-grid { grid-template-columns: 1fr; }
-  .res-overlay-inner { font-size: 11px; padding: 12px; }
+  .res-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; }
+  .res-photo-wrap img { padding: 12px; }
+  .res-meta { padding: 12px 13px 15px; }
   .res-title { font-size: 13.5px; }
+  .res-overlay-inner { font-size: 11px; line-height: 1.45; padding: 11px; }
 }
 </style>
 
