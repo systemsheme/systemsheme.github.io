@@ -21,7 +21,6 @@ subtitle: Asiri Lab Members
 <div class="container" style="margin-top: 40px;">
   <h4 class="tm-heading">Meet the Team</h4>
   <div class="tm-heading-bar"></div>
-  <p class="tm-subhead">Hover over a photo to read each person's bio. <span class="tm-touch-hint">Tap a photo to read the bio.</span></p>
 </div>
 
 <!-- ── Responsive team grid ──────────────────────────────────── -->

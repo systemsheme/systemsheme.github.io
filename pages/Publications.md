@@ -105,7 +105,7 @@ subtitle: Asiri Lab Publications
 <div class="container">
   <h1 class="pub-heading">Publications</h1>
   <div class="pub-heading-bar"></div>
-  <p class="pub-subhead">Hover over a publication to see the details.<span class="pub-touch-hint"> Tap a card to see the details.</span> For a complete list, see <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a> or <a href="https://www.ncbi.nlm.nih.gov/myncbi/asiri.ediriwickrema.1/bibliography/public/">PubMed</a>.</p>
+  <p class="pub-subhead">For a complete list, see <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a> or <a href="https://www.ncbi.nlm.nih.gov/myncbi/asiri.ediriwickrema.1/bibliography/public/">PubMed</a>.</p>
 
   <div class="pub-grid" id="pubGrid">
   {% for pub in site.data.Publications %}

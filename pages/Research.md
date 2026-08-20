@@ -47,6 +47,11 @@ subtitle: Asiri Lab Research
   max-width: 360px;
   margin: 4px 0 16px 26px;
 }
+/* Left-floated variant (e.g. Figure 3) */
+.research-float-left {
+  float: left;
+  margin: 4px 26px 16px 0;
+}
 .research-float-figure img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -188,71 +193,59 @@ subtitle: Asiri Lab Research
   .funding-logos img { transform: scale(0.85); }
 }
 
-/* ── Active Projects: card grid with hover-reveal (matches Team page) ── */
-/* Horizontal slider: single row, scroll/swipe to see more */
-.rp-scroller { position: relative; margin: 4px 0 55px; padding: 0 54px; }
-.rp-grid {
+/* ── Two-column layout: manuscript (left) + vertical projects rail (right) ── */
+.research-layout {
   display: flex;
-  gap: 26px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  align-items: flex-start;
+  gap: 34px;
+}
+.research-layout .manuscript {
+  flex: 1 1 auto;
+  max-width: none;
+  margin: 10px 0 24px;
+}
+.projects-rail {
+  flex: 0 0 clamp(300px, 30%, 380px);
+  position: sticky;
+  top: 16px;
+  margin-top: 10px;
+}
+.projects-rail .rs-heading { font-size: clamp(1.4rem, 2vw, 1.9rem); }
+
+/* Active Projects: vertical slider of hover-reveal cards */
+.rp-vscroll {
+  max-height: 82vh;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  padding: 10px 4px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 4px 8px 8px 2px;
   scrollbar-width: thin;
   scrollbar-color: #9d4844 #f2f2f2;
 }
-.rp-grid::-webkit-scrollbar { height: 8px; }
-.rp-grid::-webkit-scrollbar-track { background: #f2f2f2; border-radius: 4px; }
-.rp-grid::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 4px; }
-.rp-grid::-webkit-scrollbar-thumb:hover { background: #6f2f2c; }
+.rp-vscroll::-webkit-scrollbar { width: 8px; }
+.rp-vscroll::-webkit-scrollbar-track { background: #f2f2f2; border-radius: 4px; }
+.rp-vscroll::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 4px; }
+.rp-vscroll::-webkit-scrollbar-thumb:hover { background: #6f2f2c; }
 .rp-card {
-  flex: 0 0 clamp(250px, 26vw, 330px);
   scroll-snap-align: start;
+  flex: 0 0 auto;
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.32s cubic-bezier(.2,.7,.2,1), box-shadow 0.32s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
-.rp-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(157,72,68,0.20);
-}
-
-/* Slider navigation arrows (desktop) */
-.rp-nav {
-  position: absolute;
-  top: 160px;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: #9d4844;
-  color: #fff;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 3px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-  z-index: 5;
-  transition: background 0.2s;
-}
-.rp-nav:hover { background: #6f2f2c; }
-.rp-nav-prev { left: 2px; }
-.rp-nav-next { right: 2px; }
-.rp-nav[hidden] { display: none; }
-.rp-nav { top: clamp(135px, 15vw, 172px); }
+.rp-card:hover { box-shadow: 0 10px 26px rgba(157,72,68,0.20); }
 
 .rp-photo-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   background: #fff;
 }
 .rp-photo-wrap img {
@@ -289,8 +282,8 @@ subtitle: Asiri Lab Research
 .rp-overlay-inner::-webkit-scrollbar-track { background: #f2f2f2; }
 .rp-overlay-inner::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 3px; }
 
-.rp-meta { padding: clamp(14px, 1.4vw, 18px) clamp(14px, 1.4vw, 18px) clamp(16px, 1.6vw, 20px); }
-.rp-title { color: #9d4844; font-weight: 700; font-size: clamp(1.15rem, 0.7vw + 0.9rem, 1.45rem); line-height: 1.3; margin: 0; }
+.rp-meta { padding: 13px 16px 16px; }
+.rp-title { color: #9d4844; font-weight: 700; font-size: clamp(1.05rem, 0.5vw + 0.9rem, 1.25rem); line-height: 1.3; margin: 0; }
 
 @media (max-width: 768px) {
   .research-float-figure {
@@ -300,20 +293,28 @@ subtitle: Asiri Lab Research
     margin: 0 auto 18px;
   }
 }
+/* Stack the two columns; projects become a grid below Current Research */
+@media (max-width: 900px) {
+  .research-layout { flex-direction: column; }
+  .research-layout .manuscript { max-width: 880px; width: 100%; margin: 10px auto 0; }
+  .projects-rail { position: static; flex: 1 1 auto; width: 100%; max-width: 880px; margin: 30px auto 0; }
+  .rp-vscroll {
+    max-height: none;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 24px;
+    padding: 4px 0;
+  }
+}
 @media (max-width: 576px) {
   .research-grid { flex-direction: column; gap: 16px; align-items: stretch; }
   .research-grid-image,
   .research-grid-text { flex: 1 1 100%; }
   .research-grid-image { max-width: 340px; margin: 0 auto; }
-  .rp-nav { display: none; }
-  .rp-scroller { padding: 0; }
-  /* Smaller icon area, larger caption on phones */
-  .rp-card { flex: 0 0 78%; }
-  .rp-photo-wrap { aspect-ratio: 3 / 2; }
-  .rp-photo-wrap img { padding: 12px; }
-  .rp-meta { padding: 12px 15px 15px; }
-  .rp-title { font-size: 1.3rem; }
-  .rp-overlay-inner { font-size: 12.5px; line-height: 1.5; padding: 13px 15px; }
+  .rp-vscroll { grid-template-columns: repeat(2, 1fr); gap: 16px 14px; }
+  .rp-title { font-size: 1.05rem; }
+  .rp-overlay-inner { font-size: 11px; line-height: 1.45; padding: 12px; }
 }
 </style>
 
@@ -346,6 +347,7 @@ subtitle: Asiri Lab Research
 </div>
 
 <div class="container">
+<div class="research-layout">
 <div class="manuscript">
 	<h1 class="rs-heading"><strong>Current Research</strong></h1>
 	<div class="rs-heading-bar"></div>
@@ -366,75 +368,41 @@ subtitle: Asiri Lab Research
   </figure>
 </div>
 
-<div id="Introduction3" class="research-section">
-  <div class="research-grid">
-    <figure class="research-grid-image">
-      <img src="/img/research/csc-model.jpg" alt="LSC model">
-      <figcaption>Figure 3: The LSC model of AML. <strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
-    </figure>
-    <div class="research-grid-text">
-      <p>We are now using these methods to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
-      <p>Specifically, we will answer several important questions using the cancer stem cell model as a reference. First, how do <strong style="color:#404040ff">cancer stem cells (CSCs)</strong> emerge from healthy HSPCs, and can we identify features that distinguish CSCs from <strong style="color:#404040ff">preleukemic HSCs (pHSCs)</strong> and healthy HSPCs (Project 1)? Can we use this framework to study CSCs across other myeloid neoplasms (Project 2)? Finally, can we use this information to improve clinical disease monitoring assays and develop CSC targeted therapies to cure patients (Project 3)?</p>
-    </div>
-  </div>
+<div id="Introduction3" class="research-section research-float-section">
+  <figure class="research-float-figure research-float-left">
+    <img src="/img/research/csc-model.jpg" alt="LSC model">
+    <figcaption>Figure 3: The LSC model of AML. <strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong></figcaption>
+  </figure>
+  <p class="research-text">We are now using these methods to develop an integrative, multi-domain framework (Figure 3) for studying healthy and malignant hematopoiesis, with the long-term goal of designing more effective disease monitoring and treatment strategies for patients.</p>
+  <p class="research-text">Specifically, we will answer several important questions using the cancer stem cell model as a reference. First, how do <strong style="color:#404040ff">cancer stem cells (CSCs)</strong> emerge from healthy HSPCs, and can we identify features that distinguish CSCs from <strong style="color:#404040ff">preleukemic HSCs (pHSCs)</strong> and healthy HSPCs (Project 1)? Can we use this framework to study CSCs across other myeloid neoplasms (Project 2)? Finally, can we use this information to improve clinical disease monitoring assays and develop CSC targeted therapies to cure patients (Project 3)?</p>
 </div>
 </div><!-- .manuscript -->
-</div><!-- .container -->
 
-<div class="container" style="margin-top: 40px;">
+<aside class="projects-rail">
 	<h2 class="rs-heading"><strong>Active Projects</strong></h2>
 	<div class="rs-heading-bar"></div>
-</div>
-
-<div class="col-sm-12">
-  <div class="rp-scroller">
-    <button class="rp-nav rp-nav-prev" id="rpPrev" aria-label="Previous projects">&#8249;</button>
-    <div class="rp-grid" id="projectGrid">
-    {% for project in site.data.Projects %}
-      <div class="rp-card">
-        <div class="rp-photo-wrap">
-          {% if project.image %}<img src="{{ project.image }}" alt="{{ project.title }}">{% endif %}
-          <div class="rp-overlay"><div class="rp-overlay-inner">{{ project.description }}</div></div>
-        </div>
-        <div class="rp-meta">
-          <h4 class="rp-title">{{ project.title }}</h4>
-        </div>
-      </div>
-    {% endfor %}
-    </div>
-    <button class="rp-nav rp-nav-next" id="rpNext" aria-label="More projects">&#8250;</button>
-  </div>
-</div>
+	<div class="rp-vscroll" id="projectGrid">
+	{% for project in site.data.Projects %}
+	  <div class="rp-card">
+	    <div class="rp-photo-wrap">
+	      {% if project.image %}<img src="{{ project.image }}" alt="{{ project.title }}">{% endif %}
+	      <div class="rp-overlay"><div class="rp-overlay-inner">{{ project.description }}</div></div>
+	    </div>
+	    <div class="rp-meta">
+	      <h4 class="rp-title">{{ project.title }}</h4>
+	    </div>
+	  </div>
+	{% endfor %}
+	</div>
+</aside>
+</div><!-- .research-layout -->
+</div><!-- .container -->
 
 <script>
 (function () {
-  var grid  = document.getElementById('projectGrid');
+  var grid = document.getElementById('projectGrid');
   if (!grid) return;
   var cards = grid.querySelectorAll('.rp-card');
-  var prev  = document.getElementById('rpPrev');
-  var next  = document.getElementById('rpNext');
-
-  function step() {
-    var card = grid.querySelector('.rp-card');
-    return card ? card.getBoundingClientRect().width + 26 : 320;
-  }
-  prev.addEventListener('click', function () { grid.scrollBy({ left: -step(), behavior: 'smooth' }); });
-  next.addEventListener('click', function () { grid.scrollBy({ left:  step(), behavior: 'smooth' }); });
-
-  // Show arrows only when the row actually overflows; dim at the ends.
-  function updateArrows() {
-    var overflow = grid.scrollWidth > grid.clientWidth + 4;
-    var atStart  = grid.scrollLeft <= 2;
-    var atEnd    = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 2;
-    prev.hidden = !overflow;
-    next.hidden = !overflow;
-    prev.style.opacity = atStart ? 0.35 : 1;
-    next.style.opacity = atEnd   ? 0.35 : 1;
-  }
-  updateArrows();
-  grid.addEventListener('scroll', updateArrows, { passive: true });
-  window.addEventListener('resize', updateArrows);
-
   // Tap-to-reveal on touch devices (no hover there)
   cards.forEach(function (card) {
     card.addEventListener('click', function () {

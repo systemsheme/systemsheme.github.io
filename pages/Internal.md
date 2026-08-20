@@ -98,7 +98,6 @@ subtitle: Asiri Lab Resources
 <div class="container">
   <h1 class="res-heading">Internal Resources</h1>
   <div class="res-heading-bar"></div>
-  <p class="res-subhead">Hover over a resource to read about it.<span class="res-touch-hint"> Tap a card to read about it.</span></p>
 
   <div class="res-grid" id="resGrid">
   {% for item in site.data.Internal_Resources %}
