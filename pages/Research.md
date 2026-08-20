@@ -305,9 +305,15 @@ subtitle: Asiri Lab Research
   .research-grid-image,
   .research-grid-text { flex: 1 1 100%; }
   .research-grid-image { max-width: 340px; margin: 0 auto; }
-  .rp-card { flex: 0 0 82%; }
   .rp-nav { display: none; }
   .rp-scroller { padding: 0; }
+  /* Smaller icon area, larger caption on phones */
+  .rp-card { flex: 0 0 78%; }
+  .rp-photo-wrap { aspect-ratio: 3 / 2; }
+  .rp-photo-wrap img { padding: 12px; }
+  .rp-meta { padding: 12px 15px 15px; }
+  .rp-title { font-size: 1.3rem; }
+  .rp-overlay-inner { font-size: 12.5px; line-height: 1.5; padding: 13px 15px; }
 }
 </style>
 
