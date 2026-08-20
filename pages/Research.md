@@ -5,20 +5,47 @@ subtitle: Asiri Lab Research
 ---
 
 <style>
-.research-section { margin: 30px 0; }
-.research-section h4 { margin-bottom: 16px; }
-
 /* Section headings with maroon accent (matches Team/Resources) */
 .rs-heading { font-weight: 700; color: #333; margin-bottom: 8px; }
 .rs-heading-bar { width: 56px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 26px; }
+
+/* ── Manuscript "page" for Current Research ── */
+.manuscript {
+  max-width: 880px;
+  margin: 10px auto 24px;
+  background: #fff;
+  padding: clamp(22px, 4vw, 60px);
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 3px 22px rgba(0,0,0,0.09);
+}
+.manuscript .rs-heading {
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  margin-bottom: 8px;
+}
+.manuscript h4 {
+  font-size: clamp(1.05rem, 1.4vw + 0.6rem, 1.4rem);
+  margin-bottom: 14px;
+}
+.research-section { margin: clamp(20px, 3vw, 32px) 0; }
+
+/* Fluid, justified body text (manuscript feel) */
+.research-text,
+.research-grid-text {
+  text-align: justify;
+  font-size: clamp(14px, 0.55vw + 11.5px, 17px);
+  line-height: 1.75;
+  color: #2b2b2b;
+}
+.research-grid-text { flex: 1 1 0; min-width: 0; }
+.research-grid-text p { margin-bottom: 14px; }
 
 /* Float layout (long text wraps around image) */
 .research-float-section { overflow: hidden; }
 .research-float-figure {
   float: right;
   width: 42%;
-  max-width: 380px;
-  margin: 4px 0 14px 24px;
+  max-width: 360px;
+  margin: 4px 0 16px 26px;
 }
 .research-float-figure img {
   width: 100%;
@@ -26,20 +53,14 @@ subtitle: Asiri Lab Research
   object-fit: contain;
   background: #fff;
   display: block;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-}
-.research-float-figure figcaption {
-  font-size: 0.85em;
-  color: #404040;
-  margin-top: 8px;
-  line-height: 1.4;
-  text-align: left;
+  border-radius: 0;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.08);
 }
 
 /* Featured centered figure */
 .research-feature {
-  margin: 36px auto;
+  margin: clamp(24px, 4vw, 40px) auto;
   text-align: center;
   max-width: 920px;
 }
@@ -49,15 +70,9 @@ subtitle: Asiri Lab Research
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 14px rgba(0,0,0,0.10);
-}
-.research-feature figcaption {
-  font-size: 0.9em;
-  color: #404040;
-  margin-top: 10px;
-  line-height: 1.45;
-  text-align: center;
+  border-radius: 0;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
 }
 
 /* Vertically-centered grid (balanced image + text) */
@@ -65,37 +80,31 @@ subtitle: Asiri Lab Research
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 28px;
+  gap: clamp(18px, 3vw, 30px);
 }
-.research-grid-image { flex: 0 0 calc(40% - 14px); margin: 0; }
+.research-grid-image { flex: 0 0 calc(40% - 15px); margin: 0; }
 .research-grid-image img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   background: #fff;
   display: block;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-}
-.research-grid-image figcaption {
-  font-size: 0.85em;
-  color: #404040;
-  margin-top: 8px;
-  line-height: 1.4;
-  text-align: left;
-}
-.research-grid-text {
-  flex: 1 1 50%;
-  text-align: justify;
-  font-size: 16px;
-  line-height: 1.65;
+  border-radius: 0;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.08);
 }
 
-.research-text {
-  text-align: justify;
-  font-size: 16px;
-  line-height: 1.65;
+/* Figure captions (fluid) */
+.research-float-figure figcaption,
+.research-feature figcaption,
+.research-grid-image figcaption {
+  font-size: clamp(11.5px, 0.4vw + 10px, 13.5px);
+  color: #555;
+  margin-top: 9px;
+  line-height: 1.5;
+  text-align: left;
 }
+.research-feature figcaption { text-align: center; }
 
 /* Click-to-enlarge figures */
 .research-float-figure img,
@@ -118,7 +127,7 @@ subtitle: Asiri Lab Research
   max-height: 92vh;
   object-fit: contain;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 10px 44px rgba(0,0,0,0.55);
 }
 .rf-lightbox-close {
@@ -197,7 +206,7 @@ subtitle: Asiri Lab Research
 .rp-grid::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 4px; }
 .rp-grid::-webkit-scrollbar-thumb:hover { background: #6f2f2c; }
 .rp-card {
-  flex: 0 0 300px;
+  flex: 0 0 clamp(250px, 26vw, 330px);
   scroll-snap-align: start;
   background: #fff;
   border-radius: 6px;
@@ -238,6 +247,7 @@ subtitle: Asiri Lab Research
 .rp-nav-prev { left: 2px; }
 .rp-nav-next { right: 2px; }
 .rp-nav[hidden] { display: none; }
+.rp-nav { top: clamp(135px, 15vw, 172px); }
 
 .rp-photo-wrap {
   position: relative;
@@ -271,7 +281,7 @@ subtitle: Asiri Lab Research
   height: 100%;
   overflow-y: auto;
   padding: 16px 18px;
-  font-size: 13px;
+  font-size: clamp(12px, 0.4vw + 11px, 14px);
   line-height: 1.6;
   text-align: left;
 }
@@ -279,31 +289,23 @@ subtitle: Asiri Lab Research
 .rp-overlay-inner::-webkit-scrollbar-track { background: #f2f2f2; }
 .rp-overlay-inner::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 3px; }
 
-.rp-meta { padding: 15px 18px 18px; }
-.rp-title { color: #9d4844; font-weight: 700; font-size: 1.1rem; line-height: 1.3; margin: 0; }
+.rp-meta { padding: clamp(14px, 1.4vw, 18px) clamp(14px, 1.4vw, 18px) clamp(16px, 1.6vw, 20px); }
+.rp-title { color: #9d4844; font-weight: 700; font-size: clamp(1.15rem, 0.7vw + 0.9rem, 1.45rem); line-height: 1.3; margin: 0; }
 
 @media (max-width: 768px) {
   .research-float-figure {
     float: none;
     width: 100%;
-    max-width: 100%;
-    margin: 0 0 18px 0;
+    max-width: 340px;
+    margin: 0 auto 18px;
   }
 }
 @media (max-width: 576px) {
-  .research-section { margin: 22px 0; }
-  .research-text,
-  .research-grid-text { font-size: 14px; line-height: 1.6; }
-  .research-feature { margin: 22px auto; }
-  .research-feature figcaption,
-  .research-float-figure figcaption,
-  .research-grid-image figcaption { font-size: 0.78em; }
   .research-grid { flex-direction: column; gap: 16px; align-items: stretch; }
   .research-grid-image,
   .research-grid-text { flex: 1 1 100%; }
-  .rp-title { font-size: 1.05rem; }
-  .rp-overlay-inner { font-size: 12px; line-height: 1.5; padding: 13px; }
-  .rp-card { flex: 0 0 80%; }
+  .research-grid-image { max-width: 340px; margin: 0 auto; }
+  .rp-card { flex: 0 0 82%; }
   .rp-nav { display: none; }
   .rp-scroller { padding: 0; }
 }
@@ -337,12 +339,12 @@ subtitle: Asiri Lab Research
 	</div>
 </div>
 
-<div class="col-sm-12" style="margin-top: 20px;">
+<div class="container">
+<div class="manuscript">
 	<h1 class="rs-heading"><strong>Current Research</strong></h1>
 	<div class="rs-heading-bar"></div>
-</div>
 
-<div id="Introduction1" class="col-sm-12 research-section research-float-section">
+<div id="Introduction1" class="research-section research-float-section">
   <h4><u>Introduction</u></h4>
   <figure class="research-float-figure">
     <img src="/img/research/singlecell.jpeg" alt="Single Cell">
@@ -351,14 +353,14 @@ subtitle: Asiri Lab Research
   <p class="research-text">Myeloid neoplasms are heterogenous, clonal disorders arising from the malignant transformation of healthy <strong style="color:#404040ff">hematopoietic stem and progenitor cells (HSPCs)</strong>. The heterogeneity is due to the underlying clonal diversity of the disease and the variable functional properties of these clones. Therefore, it is not surprising that myeloid neoplasms have been historically described as syndromes with mostly ineffective treatment strategies. The inability to completely characterize the cellular architecture of myeloid neoplasms and link it to outcomes has limited our ability to manage and cure patients. Recent advancements in single cell technologies [<strong style="color:#404040ff"><a href="/pdfs/2023_blood_review.pdf">Ediriwickrema et al. <em>Blood</em> 2023</a></strong>] (Figure 1) can provide methods for addressing these limitations by allowing researchers to characterize blood cells with high resolution. However, as the field of single cell genomics expands at unprecedented rates, it is increasingly important to develop a rigorous framework for interpreting and validating important single cell observations with orthogonal computational and functional studies to provide meaningful services for patients. We have developed such a framework for studying normal and malignant hematopoiesis which has allowed us to identify new HSPCs in adult hematopoiesis [<strong style="color:#404040ff"><a href="/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong>] (Figure 2), and clinically high-risk <strong style="color:#404040ff">leukemia stem cells (LSCs)</strong> in <strong style="color:#404040ff">adult acute myeloid leukemia (AML)</strong> at high resolution.</p>
 </div>
 
-<div id="Introduction2" class="col-sm-12">
+<div id="Introduction2">
   <figure class="research-feature">
     <img src="/img/research/updated-heme.jpg" alt="hematopoiesis">
     <figcaption>Figure 2: An updated model of adult human hematopoiesis. <strong style="color:#404040ff"><a href="/pdfs/2025_MPP.pdf">Ediriwickrema et al. <em>Cell Reports</em> 2025</a></strong></figcaption>
   </figure>
 </div>
 
-<div id="Introduction3" class="col-sm-12 research-section">
+<div id="Introduction3" class="research-section">
   <div class="research-grid">
     <figure class="research-grid-image">
       <img src="/img/research/csc-model.jpg" alt="LSC model">
@@ -370,8 +372,10 @@ subtitle: Asiri Lab Research
     </div>
   </div>
 </div>
+</div><!-- .manuscript -->
+</div><!-- .container -->
 
-<div class="col-sm-12" style="margin-top: 40px;">
+<div class="container" style="margin-top: 40px;">
 	<h2 class="rs-heading"><strong>Active Projects</strong></h2>
 	<div class="rs-heading-bar"></div>
 </div>
