@@ -14,7 +14,8 @@ subtitle: Asiri Lab Publications
 /* ── Responsive grid (matches Team page) ── */
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 340px));
+  justify-content: center;
   gap: 34px 26px;
   margin-bottom: 55px;
 }
