@@ -13,7 +13,7 @@ subtitle: Asiri Lab Resources
 /* ── Responsive grid (matches Team/Publications) ── */
 .res-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-columns: repeat(2, minmax(250px, 340px));
   justify-content: center;
   gap: 34px 26px;
   margin-bottom: 55px;

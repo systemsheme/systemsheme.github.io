@@ -23,10 +23,10 @@
   imageLink: https://www.systemshematology.org/PowerR/
   description: "<a href='https://www.systemshematology.org/PowerR/' target='_blank'><strong style='color:#404040ff'>PowerR</strong></a> is a Shiny application for simulation-based power analysis to support experiment planning. The app runs entirely in your browser via <a href='https://posit-dev.github.io/r-shinylive/' target='_blank'><strong style='color:#404040ff'>shinylive</strong></a> (WebAssembly), and the source is available on <a href='https://github.com/systemsheme/PowerR' target='_blank'><strong style='color:#404040ff'>GitHub</strong></a>."
 
-- title: PrismR
-  image: /img/resources/prismr-logo.png
-  imageLink:  https://github.com/systemsheme/PrismR
-  description: "<a href='https://github.com/systemsheme/PrismR' target='_blank'><strong style='color:#404040ff'>PrismR</strong></a> is a R Shiny app for plotting and statistics. It uses the <a href='https://csdaw.github.io/ggprism/' target='_blank'><strong style='color:#404040ff'>ggprism</strong></a> theme and palettes for visual parity with Prism, and exposes R's statistical framework through <a href='https://rpkgs.datanovia.com/rstatix/' target='_blank'><strong style='color:#404040ff'>rstatix</strong></a>. The interface is highly customizable with plotting and statistics options similar to GraphPad Prism with added 3D plotting capabilities."
+# - title: PrismR
+#   image: /img/resources/prismr-logo.png
+#   imageLink:  https://github.com/systemsheme/PrismR
+#   description: "<a href='https://github.com/systemsheme/PrismR' target='_blank'><strong style='color:#404040ff'>PrismR</strong></a> is a R Shiny app for plotting and statistics. It uses the <a href='https://csdaw.github.io/ggprism/' target='_blank'><strong style='color:#404040ff'>ggprism</strong></a> theme and palettes for visual parity with Prism, and exposes R's statistical framework through <a href='https://rpkgs.datanovia.com/rstatix/' target='_blank'><strong style='color:#404040ff'>rstatix</strong></a>. The interface is highly customizable with plotting and statistics options similar to GraphPad Prism with added 3D plotting capabilities."
 
 # - title: GenAnalysis
 #   image: /img/resources/gena-logo.png
