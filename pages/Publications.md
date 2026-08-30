@@ -155,9 +155,13 @@ subtitle: Asiri Lab Publications
 }
 </style>
 
+<div class="container" style="padding-top: 60px; margin-top: -60px;">
+  <div class="jumbotron jumbotron-correct" style="padding-top: 12px; padding-bottom: 12px;">
+      <h3 style="text-align:left"> Publications</h3>
+  </div>
+</div>
+
 <div class="container">
-  <h1 class="pub-heading">Publications</h1>
-  <div class="pub-heading-bar"></div>
   <p class="pub-subhead">Selected publications are highlighted on the left; the complete list is on the right. See also <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a>.</p>
 
   <div class="pub-layout">

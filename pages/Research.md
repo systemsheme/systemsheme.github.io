@@ -221,10 +221,7 @@ subtitle: Asiri Lab Research
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 20px 18px;
-  background: rgba(157, 72, 68, 0.06);
-  border: 1px solid rgba(157, 72, 68, 0.14);
-  border-radius: 10px;
+  padding: 4px 8px 8px 2px;
   scrollbar-width: none;
 }
 .rp-vscroll::-webkit-scrollbar { display: none; }
@@ -340,8 +337,8 @@ subtitle: Asiri Lab Research
 		<img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" alt="Evans MDS" style="height: 62px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" alt="American Society of Hematology" style="height: 84px">
 		<img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" alt="Blueprint Medicines" style="height: 80px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging" style="height: 60px">
-		<img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation" style="height: 68px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging" style="height: 50px">
+		<img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation" style="height: 52px">
 	</div>
 </div>
 

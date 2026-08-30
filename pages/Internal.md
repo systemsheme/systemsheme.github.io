@@ -95,9 +95,13 @@ subtitle: Asiri Lab Resources
 }
 </style>
 
+<div class="container" style="padding-top: 60px; margin-top: -60px;">
+  <div class="jumbotron jumbotron-correct" style="padding-top: 12px; padding-bottom: 12px;">
+      <h3 style="text-align:left"> Internal Resources</h3>
+  </div>
+</div>
+
 <div class="container">
-  <h1 class="res-heading">Internal Resources</h1>
-  <div class="res-heading-bar"></div>
 
   <div class="res-grid" id="resGrid">
   {% for item in site.data.Internal_Resources %}
