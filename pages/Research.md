@@ -221,7 +221,10 @@ subtitle: Asiri Lab Research
   display: flex;
   flex-direction: column;
   gap: 22px;
-  padding: 4px 8px 8px 2px;
+  padding: 20px 18px;
+  background: rgba(157, 72, 68, 0.06);
+  border: 1px solid rgba(157, 72, 68, 0.14);
+  border-radius: 10px;
   scrollbar-width: none;
 }
 .rp-vscroll::-webkit-scrollbar { display: none; }

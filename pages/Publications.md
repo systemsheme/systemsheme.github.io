@@ -8,16 +8,39 @@ subtitle: Asiri Lab Publications
 /* ── Heading ── */
 .pub-heading { font-weight: 700; color: #333; margin-bottom: 8px; }
 .pub-heading-bar { width: 52px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 18px; }
-.pub-subhead { font-size: 14px; color: #888; margin-bottom: 34px; }
+.pub-subhead { font-size: 14px; color: #888; margin-bottom: 30px; }
 .pub-subhead a { color: #9d4844; font-weight: 600; }
 
-/* ── Responsive grid (matches Team page) ── */
+/* ── Two-column layout: featured cards (left) + full list rail (right) ── */
+.pub-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 34px;
+}
+.pub-main { flex: 1 1 auto; min-width: 0; }
+.pub-rail {
+  flex: 0 0 clamp(300px, 32%, 400px);
+  position: sticky;
+  top: 16px;
+}
+.pub-rail-title { font-weight: 700; color: #333; font-size: clamp(1.2rem, 1.6vw, 1.5rem); margin: 0 0 6px; }
+.pub-rail-bar { width: 46px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 6px; }
+.pub-rail-note { font-size: 11.5px; color: #999; margin: 0 0 12px; }
+
+/* Featured ("selected") publications — emphasized on a light maroon panel */
+.pub-main-title { font-weight: 700; color: #333; font-size: clamp(1.2rem, 1.6vw, 1.5rem); margin: 0 0 6px; }
+.pub-main-bar { width: 46px; height: 3px; background: #9d4844; border-radius: 2px; margin-bottom: 16px; }
+.pub-featured {
+  background: rgba(157, 72, 68, 0.06);
+  border: 1px solid rgba(157, 72, 68, 0.14);
+  border-radius: 10px;
+  padding: 24px 22px;
+}
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 340px));
-  justify-content: center;
-  gap: 34px 26px;
-  margin-bottom: 55px;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 26px 22px;
+  margin: 0;
 }
 
 /* ── Card ── */
@@ -87,14 +110,43 @@ subtitle: Asiri Lab Publications
 .pub-overlay-inner::-webkit-scrollbar-track { background: #f2f2f2; }
 .pub-overlay-inner::-webkit-scrollbar-thumb { background: #9d4844; border-radius: 3px; }
 
-/* ── Meta ── */
-.pub-meta { padding: 15px 16px 18px; }
-.pub-title { font-weight: 700; font-size: 14.5px; color: #2b2b2b; line-height: 1.35; }
-.pub-journal { color: #9d4844; font-weight: 700; font-size: 12.5px; margin-top: 7px; }
+/* ── Card meta ── */
+.pub-meta { padding: 14px 15px 16px; }
+.pub-title { font-weight: 700; font-size: 14px; color: #2b2b2b; line-height: 1.35; }
+.pub-journal { color: #9d4844; font-weight: 700; font-size: 12px; margin-top: 6px; }
 
-.pub-touch-hint { display: none; }
-@media (hover: none) { .pub-touch-hint { display: inline; } }
+/* ── Full publication list (right rail, live from PubMed) ── */
+.pub-list {
+  max-height: 82vh;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.16) transparent;
+}
+.pub-list::-webkit-scrollbar { width: 6px; }
+.pub-list::-webkit-scrollbar-track { background: transparent; }
+.pub-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.16); border-radius: 4px; }
+.pub-list-item {
+  display: block;
+  padding: 12px 2px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+}
+.pub-list-item:hover { background: #faf6f6; }
+.pli-title { display: block; font-weight: 700; font-size: 13px; color: #2b2b2b; line-height: 1.35; }
+.pub-list-item:hover .pli-title { color: #9d4844; }
+.pli-auth { display: block; font-size: 11.5px; color: #777; margin-top: 3px; line-height: 1.4; }
+.pli-auth strong { color: #333; }
+.pli-jrnl { display: block; font-size: 11.5px; color: #9d4844; font-weight: 600; margin-top: 2px; }
+.pub-list-msg { font-size: 12.5px; color: #888; padding: 8px 2px; }
+.pub-list-msg a { color: #9d4844; font-weight: 600; }
 
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .pub-layout { flex-direction: column; }
+  .pub-rail { position: static; flex: 1 1 auto; width: 100%; margin-top: 34px; }
+  .pub-list { max-height: 560px; }
+}
 @media (max-width: 576px) {
   .pub-grid { grid-template-columns: repeat(2, 1fr); gap: 22px 14px; }
   .pub-title { font-size: 13px; }
@@ -106,38 +158,50 @@ subtitle: Asiri Lab Publications
 <div class="container">
   <h1 class="pub-heading">Publications</h1>
   <div class="pub-heading-bar"></div>
-  <p class="pub-subhead">For a complete list, see <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a> or <a href="https://www.ncbi.nlm.nih.gov/myncbi/asiri.ediriwickrema.1/bibliography/public/">PubMed</a>.</p>
+  <p class="pub-subhead">Selected publications are highlighted on the left; the complete list is on the right. See also <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a>.</p>
 
-  <div class="pub-grid" id="pubGrid">
-  {% for pub in site.data.Publications %}
-    <div class="pub-card">
-      <div class="pub-photo-wrap">
-        {% if pub.image %}<img src="{{ pub.image }}" alt="{{ pub.title }}">{% endif %}
-        <div class="pub-overlay">
-          <div class="pub-overlay-inner">
-            <div class="pub-authors">{{ pub.authors | markdownify }}</div>
-            <div class="pub-desc">{{ pub.description | markdownify }}</div>
-            <div class="pub-links">
-              {% if pub.pubmed %}<a href="{{ pub.pubmed }}" target="_blank" rel="noopener">PubMed</a>{% endif %}
-              {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
-              {% if pub.journalLink %}<a href="{{ pub.journalLink }}" target="_blank" rel="noopener">{{ pub.journalShort }}</a>{% endif %}
+  <div class="pub-layout">
+    <div class="pub-main">
+      <div class="pub-featured">
+      <div class="pub-grid" id="pubGrid">
+      {% for pub in site.data.Publications %}
+        <div class="pub-card">
+          <div class="pub-photo-wrap">
+            {% if pub.image %}<img src="{{ pub.image }}" alt="{{ pub.title }}">{% endif %}
+            <div class="pub-overlay">
+              <div class="pub-overlay-inner">
+                <div class="pub-authors">{{ pub.authors | markdownify }}</div>
+                <div class="pub-desc">{{ pub.description | markdownify }}</div>
+                <div class="pub-links">
+                  {% if pub.pubmed %}<a href="{{ pub.pubmed }}" target="_blank" rel="noopener">PubMed</a>{% endif %}
+                  {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+                  {% if pub.journalLink %}<a href="{{ pub.journalLink }}" target="_blank" rel="noopener">{{ pub.journalShort }}</a>{% endif %}
+                </div>
+              </div>
             </div>
           </div>
+          <div class="pub-meta">
+            <div class="pub-title">{{ pub.title }}</div>
+            <div class="pub-journal">{% if pub.journal %}{{ pub.journal }} &middot; {{ pub.year }}{% else %}{{ pub.year }}{% endif %}</div>
+          </div>
         </div>
+      {% endfor %}
       </div>
-      <div class="pub-meta">
-        <div class="pub-title">{{ pub.title }}</div>
-        <div class="pub-journal">{% if pub.journal %}{{ pub.journal }} &middot; {{ pub.year }}{% else %}{{ pub.year }}{% endif %}</div>
       </div>
     </div>
-  {% endfor %}
+
+    <aside class="pub-rail">
+      <div class="pub-list" id="pubList">
+        <p class="pub-list-msg">Loading publications&hellip;</p>
+      </div>
+    </aside>
   </div>
 </div>
 
 <script>
+// Featured cards: tap-to-reveal on touch devices (links still work)
 (function () {
   var cards = document.querySelectorAll('#pubGrid .pub-card');
-  // Tap-to-reveal on touch devices (no hover there); links still work
   cards.forEach(function (card) {
     card.addEventListener('click', function (e) {
       if (e.target.closest('a')) return;
@@ -146,5 +210,53 @@ subtitle: Asiri Lab Publications
       if (!wasActive) card.classList.add('pub-active');
     });
   });
+})();
+
+// Right rail: live complete list from PubMed (NCBI E-utilities)
+(function () {
+  var list = document.getElementById('pubList');
+  if (!list) return;
+  var eutils = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
+  var term = 'Ediriwickrema+A%5BAuthor%5D';
+
+  function esc(s) {
+    return String(s || '').replace(/[&<>]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c];
+    });
+  }
+
+  fetch(eutils + 'esearch.fcgi?db=pubmed&retmode=json&retmax=300&sort=pub+date&term=' + term)
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var ids = (d.esearchresult && d.esearchresult.idlist) || [];
+      if (!ids.length) { list.innerHTML = '<p class="pub-list-msg">No publications found.</p>'; return; }
+      return fetch(eutils + 'esummary.fcgi?db=pubmed&retmode=json&id=' + ids.join(','))
+        .then(function (r) { return r.json(); })
+        .then(function (s) {
+          var res = s.result || {};
+          var order = res.uids || ids;
+          var html = '';
+          order.forEach(function (id) {
+            var it = res[id];
+            if (!it) return;
+            var authors = (it.authors || []).map(function (a) { return a.name; });
+            var authHtml = authors.map(function (n) {
+              return /^Ediriwickrema/i.test(n) ? '<strong>' + esc(n) + '</strong>' : esc(n);
+            });
+            var shown = authHtml.join(', ');
+            var year = (it.pubdate || '').split(' ')[0];
+            var jrnl = esc(it.source || '');
+            html += '<a class="pub-list-item" href="https://pubmed.ncbi.nlm.nih.gov/' + id + '/" target="_blank" rel="noopener">'
+                 +    '<span class="pli-title">' + esc(it.title || '') + '</span>'
+                 +    '<span class="pli-auth">' + shown + '</span>'
+                 +    '<span class="pli-jrnl">' + jrnl + (year ? ' &middot; ' + year : '') + '</span>'
+                 +  '</a>';
+          });
+          list.innerHTML = html;
+        });
+    })
+    .catch(function () {
+      list.innerHTML = '<p class="pub-list-msg">Unable to load the live list right now. See the <a href="https://www.ncbi.nlm.nih.gov/myncbi/asiri.ediriwickrema.1/bibliography/public/" target="_blank" rel="noopener">full list on PubMed</a>.</p>';
+    });
 })();
 </script>

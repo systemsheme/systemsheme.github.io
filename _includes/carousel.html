@@ -4,7 +4,6 @@
 
 <div class="cs-outer" id="{{ slider_id }}">
   <div class="cs-row">
-    <button class="cs-arrow cs-prev" aria-label="Previous">&#8249;</button>
     <div class="cs-viewport">
       <div class="cs-track">
         {% for item in images %}
@@ -21,7 +20,6 @@
         {% endfor %}
       </div>
     </div>
-    <button class="cs-arrow cs-next" aria-label="Next">&#8250;</button>
   </div>
   <div class="cs-dots">
     {% for item in images %}
@@ -170,8 +168,6 @@
   var track   = el.querySelector('.cs-track');
   var slides  = el.querySelectorAll('.cs-slide');
   var dots    = el.querySelectorAll('.cs-dot');
-  var prev    = el.querySelector('.cs-prev');
-  var next    = el.querySelector('.cs-next');
   var total   = slides.length;
   var current = 0;
 
@@ -183,8 +179,6 @@
     });
   }
 
-  prev.addEventListener('click', function() { goTo(current - 1); });
-  next.addEventListener('click', function() { goTo(current + 1); });
   dots.forEach(function(d, i) {
     d.addEventListener('click', function() { goTo(i); });
   });
