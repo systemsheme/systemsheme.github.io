@@ -32,6 +32,11 @@ subtitle: Asiri Lab Contact
 .contact-line { font-size: 14.5px; color: #333; line-height: 1.75; }
 .contact-line + .contact-line { margin-top: 12px; }
 .contact-line strong { color: #6f2f2c; }
+
+/* Space between the map and the address card when stacked on phones/tablets */
+@media (max-width: 991px) {
+  .contact-map { margin-bottom: 26px; }
+}
 </style>
 
 <div class="container" style="padding-top: 60px; margin-top: -60px;">
