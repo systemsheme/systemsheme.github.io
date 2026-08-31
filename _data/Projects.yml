@@ -17,3 +17,8 @@
   image: /img/research/project3.png
   caption: "Figure 6: Predictive models"
   description: "A long-term goal is to improve the clinical management of patients with myeloid neoplasms. To address this goal, we are developing a multi-domain framework for linking neoplastic cells obtained at diagnosis and during treatment with outcomes. We are using this data to design computational models using machine learning to predict the natural history of myeloid neoplasms and its response to treatment. The goal is to develop clinical assays and predictive models to guide the study and management of myeloid cancers."
+
+- title: "Project #4: Developing a single-cell multi-omic assay toolkit to study hematopoiesis"
+  image: /img/research/Project4-Assays.png
+  caption: "Figure 7: Single-cell multi-omic assay toolkit"
+  description: "We are developing and integrating a suite of single-cell assays &mdash; including <strong style='color:#404040ff'>scRNA-seq</strong>, <strong style='color:#404040ff'>scATAC-seq</strong>, <strong style='color:#404040ff'>scDNA-seq</strong>, and cell-surface protein profiling (ADT); together with single-cell lineage tracing to characterize blood cells across multiple molecular layers at high resolution. These tools underpin our functional and mechanistic studies of normal and malignant hematopoiesis."
