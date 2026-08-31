@@ -32,8 +32,8 @@ subtitle: Asiri Lab Research
 .research-text,
 .research-grid-text {
   text-align: justify;
-  font-size: clamp(14px, 0.55vw + 11.5px, 17px);
-  line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.7;
   color: #2b2b2b;
 }
 .research-grid-text { flex: 1 1 0; min-width: 0; }
