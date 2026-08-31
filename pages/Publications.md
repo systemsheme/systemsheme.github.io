@@ -34,7 +34,13 @@ subtitle: Asiri Lab Publications
   background: rgba(157, 72, 68, 0.06);
   border: 1px solid rgba(157, 72, 68, 0.14);
   border-radius: 10px;
-  padding: 24px 22px;
+  padding: 22px 22px 24px;
+}
+.pub-featured-title {
+  font-weight: 700;
+  color: #9d4844;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  margin: 0 0 18px;
 }
 .pub-grid {
   display: grid;
@@ -162,11 +168,10 @@ subtitle: Asiri Lab Publications
 </div>
 
 <div class="container">
-  <p class="pub-subhead">Selected publications are highlighted on the left; the complete list is on the right. See also <a href="https://scholar.google.com/citations?user=6VtjQ5gAAAAJ&hl=en">Google Scholar</a>.</p>
-
   <div class="pub-layout">
     <div class="pub-main">
       <div class="pub-featured">
+      <h2 class="pub-featured-title">Selected Publications</h2>
       <div class="pub-grid" id="pubGrid">
       {% for pub in site.data.Publications %}
         <div class="pub-card">

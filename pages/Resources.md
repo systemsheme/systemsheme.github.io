@@ -13,9 +13,9 @@ subtitle: Asiri Lab Resources
 /* ── Responsive grid (matches Team/Publications) ── */
 .res-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 340px));
+  grid-template-columns: repeat(2, minmax(180px, 240px));
   justify-content: center;
-  gap: 34px 26px;
+  gap: 24px 20px;
   margin-bottom: 55px;
 }
 
@@ -37,7 +37,7 @@ subtitle: Asiri Lab Resources
 .res-photo-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   background: #fff;
   border-bottom: 1px solid #f0f0f0;
 }
