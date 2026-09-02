@@ -807,6 +807,22 @@ pre {
   height: auto;
   margin: 0 auto;
 }
+/* On phones the wide banner shrinks the centered logo; zoom it wider than the
+   viewport and clip the (matching-maroon) side whitespace so the logo reads larger. */
+@media (max-width: 768px) {
+  .banner { overflow: hidden; }
+  .banner img {
+    width: 180%;
+    max-width: none;
+    margin-left: -40%;
+  }
+}
+@media (max-width: 480px) {
+  .banner img {
+    width: 205%;
+    margin-left: -52.5%;
+  }
+}
 .clear{
   clear: both;
 }
