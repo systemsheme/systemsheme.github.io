@@ -28,7 +28,7 @@ subtitle: Asiri Lab Contact
   border-radius: 10px;
   padding: 22px 24px;
 }
-.contact-card h4 { color: #9d4844; font-weight: 700; margin: 0 0 14px; font-size: 1.2rem; }
+.contact-card h4 { color: #9d4844; font-weight: 700; margin: 0 0 14px; font-size: clamp(1.05rem, 0.5vw + 0.9rem, 1.25rem); }
 .contact-line { font-size: 14.5px; color: #333; line-height: 1.75; }
 .contact-line + .contact-line { margin-top: 12px; }
 .contact-line strong { color: #6f2f2c; }

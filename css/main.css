@@ -911,6 +911,16 @@ p, li, td, th {
   }
 }
 
+/* ── Fix: keep page content centered ──
+   Bootstrap 3 `.container` uses a fixed width per breakpoint. Pages nest a
+   `.container` inside the layout's container/column, so the inner one is forced
+   wider than its parent and overflows right, shifting content. Make nested
+   containers fluid so they fit their parent and stay centered. */
+#gridid .container {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* ── Simple page header (replaces the default grey jumbotron box) ── */
 .jumbotron.jumbotron-correct {
   background: transparent;
