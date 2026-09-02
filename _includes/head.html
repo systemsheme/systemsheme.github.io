@@ -35,6 +35,18 @@
     {% endfor %}
   {% endif %}
 
+  <!-- Mark scroll-reveal active before first paint so tiles start hidden (no flash/jerk).
+       Skipped for users who prefer reduced motion. -->
+  <script>
+    (function () {
+      try {
+        if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.documentElement.className += ' sr';
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   {% if layout.common-googlefonts %}
     {% for font in layout.common-googlefonts %}
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ font }}" />

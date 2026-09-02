@@ -18,21 +18,21 @@
   ].join(',');
 
   function init() {
+    // The hidden state is applied via `html.sr` in CSS (set in <head> before
+    // paint). If `.sr` is absent (reduced motion), leave everything visible.
+    if (!document.documentElement.classList.contains('sr')) return;
+
     var els = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
     if (!els.length) return;
 
-    var reduce = window.matchMedia &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (reduce || !('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('reveal', 'is-visible'); });
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
       return;
     }
 
     // Stagger siblings that share a parent so grids cascade in.
     var counts = new WeakMap();
     els.forEach(function (el) {
-      el.classList.add('reveal');
       var parent = el.parentNode;
       var i = counts.get(parent) || 0;
       counts.set(parent, i + 1);

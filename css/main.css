@@ -951,19 +951,49 @@ p, li, td, th {
   margin-top: 14px;
 }
 
-/* ---- Scroll reveal: tiles/cards fade & lift into focus (see js/scroll-reveal.js) ---- */
-.reveal {
+/* ---- Scroll reveal: tiles/cards fade & lift into focus (see js/scroll-reveal.js) ----
+   The `.sr` class is added to <html> synchronously in the <head> before first
+   paint, so tiles start hidden with no flash/jerk. `.is-visible` is added by the
+   IntersectionObserver as each tile scrolls into focus. */
+.sr .contact-tile,
+.sr .clinic-card,
+.sr .cs-card,
+.sr .pub-card,
+.sr .res-card,
+.sr .rp-card,
+.sr .tm-card,
+.sr .research-feature,
+.sr .research-float-figure,
+.sr .fund-cell {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
               transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: opacity, transform;
 }
-.reveal.is-visible {
+.sr .contact-tile.is-visible,
+.sr .clinic-card.is-visible,
+.sr .cs-card.is-visible,
+.sr .pub-card.is-visible,
+.sr .res-card.is-visible,
+.sr .rp-card.is-visible,
+.sr .tm-card.is-visible,
+.sr .research-feature.is-visible,
+.sr .research-float-figure.is-visible,
+.sr .fund-cell.is-visible {
   opacity: 1;
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .sr .contact-tile,
+  .sr .clinic-card,
+  .sr .cs-card,
+  .sr .pub-card,
+  .sr .res-card,
+  .sr .rp-card,
+  .sr .tm-card,
+  .sr .research-feature,
+  .sr .research-float-figure,
+  .sr .fund-cell { opacity: 1; transform: none; transition: none; }
 }
 .jumbotron.jumbotron-correct p { margin-top: 16px; color: #444; }
