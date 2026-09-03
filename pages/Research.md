@@ -218,7 +218,7 @@ subtitle: Asiri Lab Research
   margin: 10px 0 24px;
 }
 .projects-rail {
-  flex: 0 0 clamp(300px, 30%, 380px);
+  flex: 0 0 clamp(340px, 36%, 460px);
   position: sticky;
   top: 16px;
   margin-top: 10px;
@@ -227,10 +227,9 @@ subtitle: Asiri Lab Research
 
 /* Active Projects: vertical slider of hover-reveal cards */
 .rp-vscroll {
-  max-height: 82vh;
+  max-height: 90vh;
   overflow-y: auto;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
+  overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -419,6 +418,22 @@ subtitle: Asiri Lab Research
       cards.forEach(function (c) { c.classList.remove('rp-active'); });
       if (!wasActive) card.classList.add('rp-active');
     });
+  });
+
+  // Scroll chaining: a card's revealed text scrolls first; once it hits the top
+  // or bottom, forward the wheel to the rail so the whole pane keeps scrolling
+  // (browsers otherwise stall chaining mid-gesture on a trackpad).
+  grid.querySelectorAll('.rp-overlay-inner').forEach(function (inner) {
+    inner.addEventListener('wheel', function (e) {
+      var delta = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY; // lines -> px
+      var canScroll = inner.scrollHeight > inner.clientHeight + 1;
+      var atTop = inner.scrollTop <= 0;
+      var atBottom = inner.scrollTop + inner.clientHeight >= inner.scrollHeight - 1;
+      if (!canScroll || (delta < 0 && atTop) || (delta > 0 && atBottom)) {
+        grid.scrollTop += delta;
+        e.preventDefault();
+      }
+    }, { passive: false });
   });
 })();
 </script>
