@@ -967,6 +967,25 @@ p, li, td, th {
   margin-top: 14px;
 }
 
+/* ---- Footer social icons (inline SVG, no icon-font dependency — renders on iOS) ---- */
+.footer-links .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #9d4844;
+  color: #fff;
+  vertical-align: middle;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.footer-links a:hover .social-icon,
+.footer-links a:focus .social-icon { background: #7d3a37; transform: translateY(-2px); }
+.footer-links .social-icon svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+.footer-links .social-icon i { font-size: 20px; line-height: 1; }
+
 /* ---- Scroll reveal: tiles/cards fade & lift into focus (see js/scroll-reveal.js) ----
    The `.sr` class is added to <html> synchronously in the <head> before first
    paint, so tiles start hidden with no flash/jerk. `.is-visible` is added by the
