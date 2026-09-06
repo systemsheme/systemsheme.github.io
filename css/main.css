@@ -967,6 +967,17 @@ p, li, td, th {
   margin-top: 14px;
 }
 
+/* ---- Theme toggle icon (inline SVG, no icon-font dependency) ---- */
+#themeToggle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+#themeToggle .icon-sun { display: none; }
+html.dark #themeToggle .icon-moon { display: none; }
+html.dark #themeToggle .icon-sun { display: inline-block; }
+
 /* ---- Footer social icons (inline SVG, no icon-font dependency — renders on iOS) ---- */
 .footer-links .social-icon {
   display: inline-flex;

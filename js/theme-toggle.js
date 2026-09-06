@@ -6,11 +6,10 @@
   function init() {
     var btn = document.getElementById('themeToggle');
     if (!btn) return;
-    var icon = btn.querySelector('span');
 
+    // Which icon (moon/sun) is shown is handled by CSS via the `dark` class on <html>.
     function sync() {
       var dark = document.documentElement.classList.contains('dark');
-      if (icon) icon.className = (dark ? 'fas fa-sun' : 'fas fa-moon');
       btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
       btn.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
     }
