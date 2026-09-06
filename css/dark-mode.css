@@ -1,0 +1,146 @@
+/* =====================================================================
+   Dark mode
+   Activated by the `dark` class on <html> (set before paint in head.html,
+   toggled by js/theme-toggle.js). This is an override layer on top of the
+   light theme baked into main.css and the per-page inline styles, so it
+   leans on descendant/attribute selectors and a few !important overrides.
+   ===================================================================== */
+html.dark {
+  --d-bg: #14100f;          /* page background (warm near-black) */
+  --d-surface: #292322;     /* cards / tiles / caption bands (muted grey, not black) */
+  --d-border: #3d3231;      /* card & divider borders */
+  --d-text: #f0eae8;        /* primary text / headings */
+  --d-text-2: #d8d1cf;      /* body copy */
+  --d-muted: #a89e9b;       /* captions / meta */
+  --d-rose: #ee9f9a;        /* lightened maroon for titles/links on dark */
+  --d-panel: #4d302e;       /* accent panels -> lighter muted red (visible) */
+  --d-figure: #e9ebee;      /* unified light-grey mat behind figures/photos/logos */
+  --d-maroon-nav: #7e3a36;  /* muted maroon for nav + banner (easier on eyes) */
+  color-scheme: dark;
+}
+
+/* ---- Base ---- */
+html.dark body { background-color: var(--d-bg) !important; color: var(--d-text); }
+html.dark h1, html.dark h2, html.dark h3,
+html.dark h4, html.dark h5, html.dark h6 { color: var(--d-text); }
+html.dark p, html.dark li, html.dark dd, html.dark dt { color: var(--d-text-2); }
+html.dark a { color: var(--d-rose); }
+html.dark a:hover, html.dark a:focus { color: #f6b8b3; }
+html.dark hr { border-color: var(--d-border); }
+html.dark blockquote { color: var(--d-muted); }
+html.dark .text-muted, html.dark small { color: var(--d-muted) !important; }
+
+/* Inline dark-grey emphasis (e.g. <strong style="color:#404040ff">) */
+html.dark [style*="#404040"],
+html.dark [style*="404040ff"] { color: var(--d-text) !important; }
+
+/* ---- Page headers (transparent jumbotron) ---- */
+html.dark .jumbotron.jumbotron-correct h1,
+html.dark .jumbotron.jumbotron-correct h2,
+html.dark .jumbotron.jumbotron-correct h3 { color: var(--d-text) !important; }
+html.dark .rs-heading,
+html.dark .clinic-heading,
+html.dark .pub-main-title,
+html.dark .pub-rail-title { color: var(--d-text) !important; }
+
+/* ---- Card / tile / sheet surfaces ---- */
+html.dark [class*="-card"],
+html.dark [class*="-tile"],
+html.dark .manuscript,
+html.dark .contact-card {
+  background: var(--d-surface) !important;
+  border-color: var(--d-border) !important;
+  color: var(--d-text);
+}
+html.dark .manuscript { box-shadow: 0 3px 22px rgba(0,0,0,0.5) !important; }
+
+/* Unified light-grey mat behind diagrams, logos, portraits and photos */
+html.dark [class*="photo-wrap"],
+html.dark .cs-img-wrap,
+html.dark .contact-tile-media--img,
+html.dark .research-float-figure img,
+html.dark .research-feature img,
+html.dark .research-grid-image img {
+  background: var(--d-figure) !important;
+  border-color: var(--d-border) !important;
+}
+html.dark .funding-logos img {
+  background: var(--d-figure);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+html.dark .funding-section { border-color: var(--d-border) !important; }
+html.dark .funding-label { color: var(--d-rose) !important; }
+
+/* ---- Accent panels (Social news, Publications "Selected") -> muted red ---- */
+html.dark .pub-featured,
+html.dark .social-news {
+  background: var(--d-panel) !important;
+  border-color: rgba(157, 72, 68, 0.55) !important;
+}
+
+/* ---- Hover-reveal overlays (white -> dark) ---- */
+html.dark [class*="-overlay"] { background: rgba(24, 19, 20, 0.97) !important; }
+html.dark [class*="overlay-inner"] { color: var(--d-text-2) !important; }
+html.dark [class*="overlay-inner"] strong { color: var(--d-text) !important; }
+html.dark [class*="-overlay"] a,
+html.dark [class*="overlay-inner"] a { color: var(--d-rose) !important; }
+
+/* ---- Card titles / labels (maroon -> lightened rose) ---- */
+html.dark [class*="-title"],
+html.dark [class*="-name"],
+html.dark [class*="-role"] { color: var(--d-rose) !important; }
+html.dark .pli-title { color: var(--d-text) !important; }
+
+/* Body copy inside cards */
+html.dark .contact-tile-body p,
+html.dark .contact-line,
+html.dark .clinic-body p,
+html.dark .research-text,
+html.dark .research-grid-text,
+html.dark .manuscript p { color: var(--d-text-2) !important; }
+html.dark figcaption { color: var(--d-muted) !important; }
+
+/* Detail text that was too dark (#333 / #2b2b2b / #777 on dark) */
+html.dark .contact-addr,
+html.dark .news-text,
+html.dark .pli-auth,
+html.dark .cs-caption,
+html.dark .jumbotron.jumbotron-correct p { color: var(--d-text-2) !important; }
+html.dark .contact-addr strong,
+html.dark .social-news-title,
+html.dark .tm-heading { color: var(--d-text) !important; }
+html.dark .contact-addr strong { color: var(--d-rose) !important; }
+html.dark .pli-auth strong { color: var(--d-text) !important; }
+
+/* ---- Publications live list ---- */
+html.dark .pub-list-item { border-color: var(--d-border) !important; }
+html.dark .pub-list-item:hover { background: rgba(157, 72, 68, 0.16) !important; }
+
+/* ---- Scrollbars ---- */
+html.dark ::-webkit-scrollbar-track { background: #241d1e !important; }
+html.dark [class*="overlay-inner"]::-webkit-scrollbar-track { background: #2a2223 !important; }
+html.dark .pub-list,
+html.dark .rp-vscroll { scrollbar-color: rgba(255,255,255,0.24) transparent; }
+html.dark .pub-list::-webkit-scrollbar-thumb,
+html.dark .rp-vscroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.24) !important; }
+
+/* ---- Footer ---- */
+html.dark footer { background-color: #0f0b0a !important; color: var(--d-muted); }
+html.dark footer a { color: var(--d-rose); }
+
+/* ---- Muted maroon nav + home banner (less bright, easier on the eyes) ---- */
+html.dark .navbar-custom {
+  background-color: var(--d-maroon-nav) !important;
+  border-bottom-color: var(--d-maroon-nav) !important;  /* was bright #9d4844: removes the seam above the banner */
+}
+html.dark .navbar-custom .navlinks-children { background-color: var(--d-maroon-nav) !important; }
+html.dark .navbar-custom .navlinks-children a:hover,
+html.dark .navbar-custom .nav > li > a:hover,
+html.dark .navbar-custom .nav > li > a:focus { background-color: rgba(0,0,0,0.18) !important; }
+html.dark .banner { background-color: var(--d-maroon-nav) !important; }
+/* The banner PNG has bright maroon baked in; dim it to match the muted nav */
+html.dark .banner img { filter: brightness(0.82) saturate(0.92); }
+
+/* ---- Theme toggle button ---- */
+.theme-toggle-li #themeToggle { cursor: pointer; }

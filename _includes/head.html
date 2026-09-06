@@ -35,6 +35,21 @@
     {% endfor %}
   {% endif %}
 
+  <!-- Apply saved / preferred colour theme before first paint (no flash). -->
+  <script>
+    (function () {
+      try {
+        var q = (location.search.match(/[?&]theme=(dark|light)/) || [])[1];
+        if (q) { try { localStorage.setItem('theme', q); } catch (e) {} }
+        var t = q || localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Mark scroll-reveal active before first paint so tiles start hidden (no flash/jerk).
        Skipped for users who prefer reduced motion. -->
   <script>

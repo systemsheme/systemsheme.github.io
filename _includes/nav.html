@@ -14,6 +14,11 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
+        <li class="theme-toggle-li">
+          <a href="javascript:void(0)" id="themeToggle" role="button" aria-label="Toggle dark mode" aria-pressed="false" title="Switch to dark mode">
+            <span class="fas fa-moon" aria-hidden="true"></span>
+          </a>
+        </li>
       {%- for link in site.navbar-links -%}
         {%- assign curkey = link[0] -%}
         {%- assign element = site.data.NavbarIcons[curkey] -%}
