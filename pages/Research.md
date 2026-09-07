@@ -189,15 +189,19 @@ subtitle: Asiri Lab Research
   padding: 20px 22px;
 }
 .funding-logos img {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: 76px;
   object-fit: contain;
-  opacity: 0.9;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .funding-logos img:hover {
-  opacity: 1;
-  transform: scale(1.06);
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14);
 }
 @media (max-width: 700px) {
   .fund-cell { flex: 0 0 33.333%; padding: 16px 12px; }
@@ -344,13 +348,13 @@ subtitle: Asiri Lab Research
 <div class="container funding-section">
 	<p class="funding-label">Supported By</p>
 	<div class="funding-logos">
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" alt="National Cancer Institute" style="height: 50px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" alt="Ludwig Cancer Research" style="height: 46px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" alt="Evans MDS" style="height: 62px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" alt="American Society of Hematology" style="height: 84px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" alt="Blueprint Medicines" style="height: 80px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging" style="height: 50px"></div>
-		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation" style="height: 52px"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/960px-National_Cancer_Institute_logo.png" alt="National Cancer Institute"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/Ludwig_Cancer_Research_Logo.jpg" alt="Ludwig Cancer Research"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/evansmds-logo.png" alt="Evans MDS"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/ASHLogoSVG.png" alt="American Society of Hematology"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" alt="Blueprint Medicines"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation"></div>
 	</div>
 </div>
 

@@ -62,13 +62,9 @@ html.dark .research-float-figure img,
 html.dark .research-feature img,
 html.dark .research-grid-image img {
   background: var(--d-figure) !important;
-  border-color: var(--d-border) !important;
+  border-color: #d3d5d9 !important;  /* light, subtle — was a harsh dark border */
 }
-html.dark .funding-logos img {
-  background: var(--d-figure);
-  border-radius: 8px;
-  padding: 10px 12px;
-}
+/* funding logos keep their white bordered buttons from Research.md (no dark override) */
 html.dark .funding-section { border-color: var(--d-border) !important; }
 html.dark .funding-label { color: var(--d-rose) !important; }
 
