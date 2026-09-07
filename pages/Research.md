@@ -190,12 +190,12 @@ subtitle: Asiri Lab Research
 }
 .funding-logos img {
   width: 100%;
-  height: 76px;
+  height: 80px;
   object-fit: contain;
   background: #fff;
   border: 1px solid #e2e2e2;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 8px 14px;
   box-sizing: border-box;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -203,6 +203,8 @@ subtitle: Asiri Lab Research
   transform: scale(1.04);
   box-shadow: 0 4px 14px rgba(0,0,0,0.14);
 }
+/* ASH is a square logo — near-zero padding so its circle reads the same size as the landscape logos */
+.funding-logos img[alt="American Society of Hematology"] { padding: 1px; }
 @media (max-width: 700px) {
   .fund-cell { flex: 0 0 33.333%; padding: 16px 12px; }
 }
