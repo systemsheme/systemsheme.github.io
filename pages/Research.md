@@ -357,6 +357,7 @@ subtitle: Asiri Lab Research
 		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/blueprint.jpg" alt="Blueprint Medicines"></div>
 		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/Nih-nia-logo-landscape.png" alt="National Institute on Aging"></div>
 		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/lrf.png" alt="Leukemia Research Foundation"></div>
+		<div class="fund-cell"><img src="{{ site.url }}{{ site.baseurl }}/img/taub.png" alt="Henry &amp; Marilyn Taub Foundation"></div>
 	</div>
 </div>
 
