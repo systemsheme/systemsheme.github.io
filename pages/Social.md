@@ -37,9 +37,19 @@ subtitle: Social and News
 .news-date { font-size: 12.5px; color: #777; font-style: italic; margin-bottom: 3px; }
 .news-text { font-size: 14px; color: #333; line-height: 1.5; }
 
+.social-pics, .social-news { min-width: 0; box-sizing: border-box; }
+.news-text { overflow-wrap: anywhere; }
+
+/* Tablet/phone: single centered column, like the other pages */
 @media (max-width: 900px) {
-  .social-layout { flex-direction: column; }
-  .social-news { flex: 1 1 auto; width: 100%; margin-top: 30px; }
+  .social-layout { flex-direction: column; align-items: stretch; gap: 0; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .social-pics { width: 100%; }
+  .social-news { flex: 1 1 auto; width: 100%; margin-top: 24px; }
+}
+@media (max-width: 576px) {
+  .social-layout { margin-top: 12px; }
+  .social-news { padding: 16px 16px 4px; }
+  .news-text { font-size: 13.5px; }
 }
 </style>
 

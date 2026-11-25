@@ -68,16 +68,21 @@
 }
 .cs-viewport {
   overflow: hidden;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;          /* iOS Safari: don't let photo intrinsic width blow out the row */
+  width: 100%;
   max-width: 680px;
 }
 .cs-track {
   display: flex;
+  width: 100%;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 .cs-slide {
+  flex: 0 0 100%;
   min-width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 0 6px;
 }
